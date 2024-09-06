@@ -1,10 +1,8 @@
 ## Old Wine for New Bottle - Legacy Bug Exploitation
 
-Due to a plugin called `jekyll-titles-from-headings` which is supported by GitHub Pages by default. The above header (in the markdown file) will be automatically used as the pages title.
+INTRODUCTION
 
-If the file does not start with a header, then the post title will be derived from the filename.
-
-This is a sample blog post. You can talk about all sorts of fun things here.
+For the past few quarters, I've been working on developing regulatory testing scripts framwork. Essentially, framework is a set of automated vehicle tests that check whether mitigation are implemented against common threats. This is aims to cover UNR155 Threats and Mitigation to provide a baseline test suite. We plans to expand coverage to include wireless, USB, cellular, and many other in-car communication interfaces. That's where I come in, as a vulnerability researcher, I've always had a passion for wireless and embedded systems security. In the past, I've discovered various bugs, one of the highlights being Rolling-PWN, which affects all models of the Honda key fob system globally. Additionally, my colleague and I found a backdoor-like account in the firmware of an EV charging station from Schneider, which led to a full compromise of the EV charging network. We received acknowledgement from Schneider and later presented a talk at DEFCON.
 
 ---
 
