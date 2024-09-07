@@ -15,3 +15,37 @@ In year 2021, a team of researchers at SUTD (Asset-Group) discovered and disclos
 
 ![Screenshot from 2024-08-07 16-40-06](https://github.com/user-attachments/assets/bd072e67-4e16-4427-bd08-1dcd1d802ac5)
 
+In the paper they mentioned that Braktooth not only affects laptops and smartphones, but also infotainment units in automobiles. This is great, it sounds like a perfect test case for Breakwater. They released 16 POCs from the Braktooth vulnerabilities, but we found one of the vulnerabilities called Invalid-Timing-Accuracy almost always work across different chipsets. The vulnerable chipsets do not properly handle the reception of a malformed LMP timing accuracy response followed by multiple re-connections to the target link slave. 
+
+![Screenshot from 2024-08-05 17-48-27](https://github.com/user-attachments/assets/60db60cf-3b85-4057-b773-dc4ccc1dcb46)
+
+During the experiment, we found that more than 20 vehicles are vulnerable to Braktooth, regardless of model or brand. The full testing report can be found at this link. Here are some highlights from the test results. The first one is NIO ET5, which is a brand quite popular in China. After running the Invalid-Timing-Accuracy script, the NIO-ET5 disconnects the Bluetooth connection immediately, causing a poor user experience.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
