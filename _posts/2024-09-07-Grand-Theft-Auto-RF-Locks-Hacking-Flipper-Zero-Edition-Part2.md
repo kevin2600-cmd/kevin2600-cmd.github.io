@@ -88,6 +88,97 @@ Since Rolljam attack needs a jammer and recorder work at the same time, we can u
 
 In year 2021, I have found a very interesting yet scary car lock vulnerability, which affected all Honda vehicles currently existing on the market globally from year 2012 up to year 2023. All Honda vehicles allow a replay of the already expired commands in a consecutive sequence to unlock the car door permanently. 
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BtYhD1X_L3A" 
+title="YouTube video player" frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+
+The CVE-2021-46145 has assigned to this bug, and I have written an article dedicated to this bug (https://rollingpwn.github.io/rolling-pwn). Special thanks to researcher, Rob Stumpf helped us to verify the bug with his own 2021 Honda Accord from the US.
+
+![image](https://github.com/user-attachments/assets/5ca2d08c-81a8-4a96-b723-c989bcf366b8)
+
+Moreover, Honda officially acknowledge the bug. However, Honda concluded this is a low risk to customers, and Honda regularly improves security features as new models are introduced that would thwart this and similar approaches. Fingers crossed.
+
+![image](https://github.com/user-attachments/assets/cda6a119-5d9a-439c-8eb3-9f410dff98d6)
+
+In later Aug 2022, group of researchers from Singapore presented a talk at Blackhat USA addressing the same issue, and they found out the bug also affected many other brands of cars. As we mentioned in the Rolling-Pwn article, we knew about this. However, we were keeping what other brands were also affected by the bug quiet at that time. Because we are busy preparing for a Pwn2own style hacker competition called Geekpwn, and one of our modern smart car targets for the competition is vulnerable to the bug. Luckily, we won second runner-up in the end. As you can see in the pic below, we were using a high gain antenna to pwned those two different brands of cars in a fairly long distance.
+
+![image](https://github.com/user-attachments/assets/357a6943-0d0c-4451-ade9-93f07746e50d)
+
+![image](https://github.com/user-attachments/assets/0c3cf651-0430-4613-a4e2-4a3ccddf7160)
+
+### 0x04. KEELOQ DECRYPTION
+
+In the world of crypto, there is a well-known Kerckhoff principle; a crypto system should be secure even if the attacker knows all the details about the system, except the secret key. However, have you ever wondered what happen if that secret key leaked from manufacturer or a default manufacturer key from the datasheet used in the final products? These kinds of incidents are not uncommon; remember the mifare crypto1 default key hacks, anyone? Let’s take a widely used rolling code algorithm called Keeloq as an example.
+
+![image](https://github.com/user-attachments/assets/fe53e119-fbf7-4a8c-abbe-9cad0edf9f59)
+
+KeeLoq is a proprietary cipher owned by Microchip. It is widely used in keyfob systems by car companies such as Honda, Toyota, Volvo, Volkswagen Group and so on. If we found HCS200 or HCS300 series chipset inside the keyfob, which means we are facing the Keeloq cipher based system. In March 2008, researchers from the Ruhr University, Bochum, broke the KeeLoq-based cipher with side-channel analysis. By measuring the power consumption of a device during encryption, the researchers can extract the manufacturer key from the receivers and the remote control.
+
+![image](https://github.com/user-attachments/assets/9b73f89a-d684-45b1-bd94-822674436a4d)
+
+When we connect the HCS201 chip to an oscilloscope or logic analyzer, we can see Keeloq's signal waveform. First, there will be a preamble at the start of the signal, followed by the rolling codes, serial number, function code and status code.
+
+![image](https://github.com/user-attachments/assets/c0b350ad-0824-42ea-9387-13ef09ce3dd1)
+
+![image](https://github.com/user-attachments/assets/a0c47e1f-1999-4541-8ffe-dc34e68b5a00)
+
+Keeloq data structure has a total of 66 bits, including 32 bits of rolling code, 28 bits of serial number, and 4 bits of button function code and 2 bits of status code. The encoding is PWM.
+
+![image](https://github.com/user-attachments/assets/e50a59fa-6ab0-4a71-910d-a357a1661b84)
+
+In terms of encryption key generation, Keeloq has three modes: simple, standard and secure. The manufacturer's secret key for simple encryption is the same. For standard encryption, the manufacturer's secret key for each keyfob is unique. Taking standard encryption as an example, assumes that the serial number is 0x1234567. First add 2 as prefix for serial numbers, it become 0x21234567, then encrypted using the manufacturer's secret key to get a 32-bit LSB of 0x89074278. Second add 6 as prefix for serial numbers, it become 0x61234567, again encrypted using the manufacturer's secret key to get the 32 bit MSB 0x0516FBE9. The encryption key to this is 0x0516FBE989074278.
+
+![image](https://github.com/user-attachments/assets/5b3dc722-5b36-4912-8b6d-c257d2cb8ab0)
+
+We can use the simulator to demonstrate it in practice. Here we set the manufacturer's secret key to 0123456789ABCDEF, the serial number to 4141410, and the counter starts from 2600.
+
+![image](https://github.com/user-attachments/assets/4eb6ef89-7b68-463d-ad62-ab9747fb2b2c)
+
+After analyzing the packets with URH, we can see that the 28-bit serial number is indeed 4141410.
+
+![image](https://github.com/user-attachments/assets/5311fe21-ac52-4bdd-a1ae-579392ac96c9)
+
+The 32-bits rolling code contains key information such as counters to prevent a replay attack.
+
+As mentioned earlier, if the default manufacturer key has been used. We can decrypt the 32-bits rolling codes with the program, you can see the rolling code in sequence in the decrypted message, which matches the starting value of 2600 we set earlier.
+
+![image](https://github.com/user-attachments/assets/2736aebb-8ae4-4265-90bf-ac454d0c14ac)
+
+As you can see the video below, we can spoof a new command to turn on the light.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uyk0xOtnUew" 
+title="YouTube video player" frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+
+### 0x05. SUMMARY
+In Part 2, we have looked at some of the advanced techniques, such as RollJAM; Rolling-PWN and Keeloq Decryption. However, there are many other types of encryption and rolling code algorithms to play with. Stay tuned.
+
+![image](https://github.com/user-attachments/assets/7b6393cb-1021-4fbc-8b60-0bda191ecaa8)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
