@@ -108,10 +108,16 @@ Have you ever wondered if those fixed-code lock systems are bruteforceable? Here
 By using the Flipper-Zero we are able to tell this lock is based on Princeton. We also can use app Pulse Plotter from Flipper-Zero to analyzing the signal. However, I would like to recommend a software designed for reversing wireless signal called Universe Radio Hacker to do the job. URH is a complete suite for wireless protocol investigation. URH allows easy demodulation of signals combined with an automatic detection of modulation parameters making it a breeze to identify the bits and bytes that fly over the air.
 </p>
 
+![image](https://github.com/user-attachments/assets/3681da85-c93e-426d-bb62-39051e5c5bbf)
 
+![image](https://github.com/user-attachments/assets/a3f45f80-c321-433c-984a-67f5c6d876f5)
 
+After capturing the unlock signal from the keyfob, the fixed code contents can be easily analyzed with URH. Since the DIP switch only 3^8 combination. It is very easy to brute force all 6561 combinations through the Fuzzing function of URH. As you can see in the video below.
 
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wgWMDBtQYrw" 
+title="YouTube video player" frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
 
 
 
