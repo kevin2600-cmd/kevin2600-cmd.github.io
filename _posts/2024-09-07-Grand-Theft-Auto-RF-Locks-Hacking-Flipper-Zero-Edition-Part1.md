@@ -24,7 +24,7 @@ One of the easiest yet effective RF attack techniques called signal jamming. The
 
 <p align="justify">
 Jamming attacks against car locks are also one of thieves' favorites. Criminals use hidden jamming equipment to prevent car owners from locking their cars. Once car owners leave, they can easily open the car door and steal the belongings left inside the car. Although signal jamming is not a new concept, it continues to grow in popularity among criminals, as the technology used becomes more sophisticated and easily accessible.
-</p>SDuiAK10B3U
+</p>
 
 ![image](https://github.com/user-attachments/assets/8c9662b4-b116-47ca-a4f5-a9ad65ccb36b)
 
