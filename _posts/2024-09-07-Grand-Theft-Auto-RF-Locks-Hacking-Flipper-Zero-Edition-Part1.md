@@ -57,6 +57,7 @@ title="YouTube video player" frameborder="0"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 
+
 Interestingly for Tesla’s charging port, it still uses a fixed-code mechanism. People can download the pre-recorded Tesla Charge Port files to the Flipper-Zero, and messing with other Tesla vehicle owners, yet not knowing what is really going on behind the scenes. 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SDuiAK10B3U" 
@@ -64,6 +65,13 @@ title="YouTube video player" frameborder="0"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 
+(Source from @takeapart)
+
+### 0x03. SIGNAL REPLAY ANALYZE
+
+<p align="justify">
+Only blindly replaying the signal is not going to satisfy the Hackers. Unlike the jamming attacks, if we like to get to know our target better, we need to find out the target frequency, encoding method, chip model, etc. For example, we can learn the operating frequency by using the Frequency Analyzer application provided by Flipper-Zero.
+</p>
 
 
 
