@@ -37,11 +37,15 @@ title="YouTube video player" frameborder="0"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 
+In addition, Flipper-Zero can add some well-known keyfobs protocols manually. Take LiftMaster_315 as an example. It implemented a rolling code mechanism. However, as you can see in the pics below, the counter value is predictable, so does the key. Therefore, it is very easy to capture then spoof an unlock command to such system.
 
+![image](https://github.com/user-attachments/assets/183ef6fa-989a-4a88-9bee-d527f1162bed)
 
+![image](https://github.com/user-attachments/assets/b658008d-f0b5-456e-854f-289732a86fd1)
 
+### 0x02. ROLLJAM ATTACK
 
-
+Fortunately, most car manufacturers will not use such naive designs for the car door locks. They prefer to use their own proprietary encryption algorithms instead. As you can see in the picture below is a 2014 Jetta keyfob. Since Volkswagen keeps the algorithms secret, the flipper-zero is not able to recognize it. 
 
 
 
