@@ -23,7 +23,7 @@ During the experiment, we found that more than 20 vehicles are vulnerable to Bra
 
 https://github.com/user-attachments/assets/bb9dce96-8013-4939-beb5-e3aa52577f04
 
-
+The second example is the Changan Uni-T from China. The Bluetooth connection was disconnected after the attack.
 
 
 
