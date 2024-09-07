@@ -38,6 +38,7 @@ title="YouTube video player" frameborder="0"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 
+
 <p align="justify">
 Although Flipper Zero comes with certain regional and frequency restrictions, by installing a custom firmware (Xtreme) can bypassed this limit. This made Flipper-Zero perfect for experimenting with the jamming attack. 
 </p>
