@@ -96,8 +96,17 @@ title="YouTube video player" frameborder="0"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 
+### 0x04. SIGNAL REPLAY BRUTEFORCE
 
+Have you ever wondered if those fixed-code lock systems are bruteforceable? Here is an interesting lock; it comes with 8 DIP switches on both the lock and keyfob side, we can switch up, center and down to have different combinations. 
 
+![image](https://github.com/user-attachments/assets/88116426-41bf-4c76-81d1-36727b221792)
+
+![image](https://github.com/user-attachments/assets/8bb2b402-1bdf-439f-84f6-06b0bccd58e6)
+
+<p align="justify">
+By using the Flipper-Zero we are able to tell this lock is based on Princeton. We also can use app Pulse Plotter from Flipper-Zero to analyzing the signal. However, I would like to recommend a software designed for reversing wireless signal called Universe Radio Hacker to do the job. URH is a complete suite for wireless protocol investigation. URH allows easy demodulation of signals combined with an automatic detection of modulation parameters making it a breeze to identify the bits and bytes that fly over the air.
+</p>
 
 
 
