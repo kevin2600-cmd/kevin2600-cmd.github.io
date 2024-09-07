@@ -107,7 +107,7 @@ Since the lock system of this E-Scooter again relies on the fixed-code, we can s
 title="YouTube video player" frameborder="0" 
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
-
+<br>
 
 ### 0x04. SIGNAL REPLAY BRUTEFORCE
 
