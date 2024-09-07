@@ -42,7 +42,23 @@ Although Flipper Zero comes with certain regional and frequency restrictions, by
 
 (Source from @McSHUR1KEN)
 
+### 0x02. SIGNAL REPLAY BLINDLY 
 
+<p align="justify">
+Of course, it would be cooler if we can control the target. The replay attack is one of the oldest tricks from the book that can achieve exactly that. Since most RF lock system operating frequency is at 315 MHz or 433 MHz range, and some of them still use fixed-code mechanism. Meaning we can just leave the capture device near the target and wait patiently. If lucky enough we will be able to catch the unlock signal for a later replay.
+</p>
+
+![image](https://github.com/user-attachments/assets/f7265af0-25e7-4cba-912c-2c16a826dd8c)
+
+This is a lot like fishing, but the reward is unlock signal instead. Below is a video demonstration of the replay attack with HackRF. As you can see in the video below, it works as a charm.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jUGePOmJzac" 
+title="YouTube video player" frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+
+
+Interestingly for Tesla’s charging port, it still uses a fixed-code mechanism. People can download the pre-recorded Tesla Charge Port files to the Flipper-Zero, and messing with other Tesla vehicle owners, yet not knowing what is really going on behind the scenes. 
 
 
 
