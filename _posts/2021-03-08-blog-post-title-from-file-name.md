@@ -21,8 +21,7 @@ In the paper they mentioned that Braktooth not only affects laptops and smartpho
 
 During the experiment, we found that more than 20 vehicles are vulnerable to Braktooth, regardless of model or brand. The full testing report can be found at this link. Here are some highlights from the test results. The first one is NIO ET5, which is a brand quite popular in China. After running the Invalid-Timing-Accuracy script, the NIO-ET5 disconnects the Bluetooth connection immediately, causing a poor user experience.
 
-
-
+https://github.com/user-attachments/assets/bb9dce96-8013-4939-beb5-e3aa52577f04
 
 
 
