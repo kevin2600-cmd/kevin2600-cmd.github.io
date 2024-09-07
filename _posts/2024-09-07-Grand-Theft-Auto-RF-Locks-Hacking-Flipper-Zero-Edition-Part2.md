@@ -49,25 +49,44 @@ Fortunately, most car manufacturers will not use such naive designs for the car 
 
 ![image](https://github.com/user-attachments/assets/6be85cf0-30b2-45dd-8d41-0a5fedb8dbf1)
 
+Again, we use URH for the analyzing Jetta keyfob packets. One nice feature of URH is that we can highlight the sequence of packets in color; this makes analyzing job much easier. Each valid sequence of commands will start with 10101000 in green as the sync-word. 
 
+![image](https://github.com/user-attachments/assets/9ddbe92e-87ca-4fa3-bbff-3c5f605b001b)
 
+From the 305th to the 312th in red are operation commands. For example, 00011100 is the command to open the door, and 00101010 is the command to close the door. The blue part is the rolling codes that change every time. 
 
+![image](https://github.com/user-attachments/assets/10366914-a6bf-4d4c-a917-f3e74d75ab26)
 
+URH comes with a comparison function that can be used to compare and analyze the rolling code parts between different commands.
+![image](https://github.com/user-attachments/assets/19ba2a38-b315-4415-b96c-6338a59b6985)
 
+As you can see in the demo video below, since modern cars nowadays have implemented the proprietary rolling code mechanism, we can only replay the unlock command once.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kNzH_on9HlM" 
+title="YouTube video player" frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
 
+Years ago, a security researcher, Samy Kamkar, came up with an idea that can manipulate certain rolling code system. He called it the Rolljam Attack. How Rolljam attack works is well explained in the slides below. The Rolljam attack works by jamming the target radio signal at slightly deviated frequency and recording the signal at tight receiver filter bandwidth from the keyfob at the same time. Since the first unlock signal is blocked, the car door will not unlock and the car owner will likely try again. Attacker can again record and block the second signal, but this time the attackers also replays the first code to unlock the car door.
 
+![image](https://github.com/user-attachments/assets/115d2625-dfde-410d-81a8-bb9a036a9bbd)
 
+As you can see in the demo video of rolljam attack below, the HackRF has been used as a signal jammer, and Yardstick 1 as the recorder and transmitter.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Yesp2NRBiCM" 
+title="YouTube video player" frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
 
+Since Rolljam attack needs a jammer and recorder work at the same time, we can use HackRF and Flipper-Zero as combo tools for this attack.
 
+![image](https://github.com/user-attachments/assets/21ffeec6-14fe-4ae9-bb89-841ea52f616c)
 
+(Source from @takeapart)
 
+### 0x03. ROLLING-PWN 
 
-
-
-
-
+In year 2021, I have found a very interesting yet scary car lock vulnerability, which affected all Honda vehicles currently existing on the market globally from year 2012 up to year 2023. All Honda vehicles allow a replay of the already expired commands in a consecutive sequence to unlock the car door permanently. 
 
 
 
