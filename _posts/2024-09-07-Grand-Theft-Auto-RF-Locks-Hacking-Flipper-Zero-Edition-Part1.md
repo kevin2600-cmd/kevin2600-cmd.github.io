@@ -73,6 +73,35 @@ allowfullscreen></iframe>
 Only blindly replaying the signal is not going to satisfy the Hackers. Unlike the jamming attacks, if we like to get to know our target better, we need to find out the target frequency, encoding method, chip model, etc. For example, we can learn the operating frequency by using the Frequency Analyzer application provided by Flipper-Zero.
 </p>
 
+![image](https://github.com/user-attachments/assets/d407f262-2f78-45b1-96e5-b40bf870aa28)
+
+<p align="justify">
+Alternatively, do an old school way by disassemble the keyfob and investigating the PCB. Here we see the IC chip model (CMT2150L) and a component crystal (26.250M) on an E-Scooter Keyfob. By checking the datasheet, we can found the operating frequency. The encoder is 1527. Most importantly the pinout diagram of the CMT2150L chip.
+</p>
+
+![image](https://github.com/user-attachments/assets/266445a4-341a-4953-b9f0-27c4dcca02ea)
+![image](https://github.com/user-attachments/assets/401ea712-7950-4fac-8bc1-997bbe84830a)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
