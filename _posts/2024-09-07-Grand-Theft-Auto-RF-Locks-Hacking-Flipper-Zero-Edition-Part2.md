@@ -47,6 +47,7 @@ In addition, Flipper-Zero can add some well-known keyfobs protocols manually. Ta
 
 Fortunately, most car manufacturers will not use such naive designs for the car door locks. They prefer to use their own proprietary encryption algorithms instead. As you can see in the picture below is a 2014 Jetta keyfob. Since Volkswagen keeps the algorithms secret, the flipper-zero is not able to recognize it. 
 
+![image](https://github.com/user-attachments/assets/6be85cf0-30b2-45dd-8d41-0a5fedb8dbf1)
 
 
 
