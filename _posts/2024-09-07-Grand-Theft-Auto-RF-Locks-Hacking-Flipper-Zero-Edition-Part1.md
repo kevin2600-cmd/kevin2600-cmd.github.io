@@ -23,7 +23,7 @@ One of the easiest yet effective RF attack techniques called signal jamming. The
 
 <p align="justify">
 Jamming attacks against car locks are also one of thieves' favorites. Criminals use hidden jamming equipment to prevent car owners from locking their cars. Once car owners leave, they can easily open the car door and steal the belongings left inside the car. Although signal jamming is not a new concept, it continues to grow in popularity among criminals, as the technology used becomes more sophisticated and easily accessible.
-</p>
+</p>SDuiAK10B3U
 
 ![image](https://github.com/user-attachments/assets/8c9662b4-b116-47ca-a4f5-a9ad65ccb36b)
 
@@ -57,12 +57,12 @@ title="YouTube video player" frameborder="0"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 
-
 Interestingly for Tesla’s charging port, it still uses a fixed-code mechanism. People can download the pre-recorded Tesla Charge Port files to the Flipper-Zero, and messing with other Tesla vehicle owners, yet not knowing what is really going on behind the scenes. 
 
-
-
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SDuiAK10B3U" 
+title="YouTube video player" frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
 
 
 
