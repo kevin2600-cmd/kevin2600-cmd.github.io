@@ -21,21 +21,14 @@ In the paper they mentioned that Braktooth not only affects laptops and smartpho
 
 During the experiment, we found that more than 20 vehicles are vulnerable to Braktooth, regardless of model or brand. The full testing report can be found at this link. Here are some highlights from the test results. The first one is NIO ET5, which is a brand quite popular in China. After running the Invalid-Timing-Accuracy script, the NIO-ET5 disconnects the Bluetooth connection immediately, causing a poor user experience.
 
-[![Braktooth test on NIO ET5](https://img.youtube.com/vi/MbLr1RKdfOE/0.jpg)](https://www.youtube.com/watch?v=MbLr1RKdfOE)
-
-The second example is the Changan Uni-T from China. The Bluetooth connection was disconnected after the attack.
-
-<video width="600" controls>
-  <source src="/path/to/your/video.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
-
 <iframe width="560" height="315" src="https://www.youtube.com/embed/MbLr1RKdfOE" 
 title="YouTube video player" frameborder="0" 
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 
+The second example is the Changan Uni-T from China. The Bluetooth connection was disconnected after the attack.
+
+Ironically, this vehicle is so vulnerable that it failed almost every Braktooth test case, making it one of the worst brands in the report. As the picture shows, the Uni-T’s IVI is vulnerable to the KNOB attack, which is another critical Bluetooth vulnerability.
 
 
 
