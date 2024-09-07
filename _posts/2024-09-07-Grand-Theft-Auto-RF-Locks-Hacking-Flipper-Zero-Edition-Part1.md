@@ -119,6 +119,13 @@ title="YouTube video player" frameborder="0"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 
+A person called Hong5489 has implemented the brute force sub files for Flipper-Zero. You can get sub files from his github. One thing need to be careful though is that when he tries to brute force his own gate, accidentally opens the neighbors gate.
+
+![image](https://github.com/user-attachments/assets/2ae11535-9942-4ecd-a6d2-970e1adf8223)
+
+### 0x05. SUMMARY
+
+In this article, we have looked at the common methods of RF Locks hacking. In Part2, we are going to look at more advanced and interesting RF Locks hacking techniques. Stay tuned.
 
 
 
