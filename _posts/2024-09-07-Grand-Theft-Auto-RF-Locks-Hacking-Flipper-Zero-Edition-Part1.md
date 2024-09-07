@@ -14,6 +14,7 @@ This article serves as a beginner’s RF lock system hacking journey, performing
 </p>
 
 ### 0x01. SIGNAL JAMMING  
+
 <p align="justify">
 One of the easiest yet effective RF attack techniques called signal jamming. The attacker is constantly sending noise signals at that same frequency channel as the target, hoping to jam the original signal to achieve interference. Jamming essentially disrupts communication between two or more devices by shouting louder. It does not matter what to shout, as long as others cannot hear you.
 </p>
@@ -28,7 +29,9 @@ Jamming attacks against car locks are also one of thieves' favorites. Criminals 
 
 ![image](https://github.com/user-attachments/assets/8c9662b4-b116-47ca-a4f5-a9ad65ccb36b)
 
+<p align="justify">
 Below is a video demonstration of the car jamming attack with HackRF. As you can see in the video below how effective the attack is. Please ensure the car door is securely locked before you leave.
+</p>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/iuRdLtz4pmY" 
 title="YouTube video player" frameborder="0" 
