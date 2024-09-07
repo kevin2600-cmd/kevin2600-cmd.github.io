@@ -28,7 +28,7 @@ allowfullscreen></iframe>
 
 The second example is the Changan Uni-T from China. The Bluetooth connection was disconnected after the attack.
 
-Ironically, this vehicle is so vulnerable that it failed almost every Braktooth test case, making it one of the worst brands in the report :sweat_smile:. As the picture shows, the Uni-T’s IVI is vulnerable to the KNOB attack, which is another critical Bluetooth vulnerability.
+Ironically, this vehicle is so vulnerable that it failed almost every Braktooth test case, making it one of the worst brands in the report :sweat_smile: . As the picture shows, the Uni-T’s IVI is vulnerable to the KNOB attack, which is another critical Bluetooth vulnerability.
 
 
 
