@@ -40,7 +40,7 @@ As you can see in the demo video below, we only need to capture the unlocking co
 title="YouTube video player" frameborder="0" 
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
-<br>
+
 <p align="justify">
 In addition, Flipper-Zero can add some well-known keyfobs protocols manually. Take LiftMaster_315 as an example. It implemented a rolling code mechanism. However, as you can see in the pics below, the counter value is predictable, so does the key. Therefore, it is very easy to capture then spoof an unlock command to such system.
 </p>
@@ -189,7 +189,6 @@ As you can see the video below, we can spoof a new command to turn on the light.
 title="YouTube video player" frameborder="0" 
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
-<br>
 
 ### 0x05. SUMMARY
 
