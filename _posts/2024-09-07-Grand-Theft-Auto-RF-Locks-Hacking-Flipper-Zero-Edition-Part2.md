@@ -70,6 +70,7 @@ From the 305th to the 312th in red are operation commands. For example, 00011100
 ![image](https://github.com/user-attachments/assets/10366914-a6bf-4d4c-a917-f3e74d75ab26)
 
 URH comes with a comparison function that can be used to compare and analyze the rolling code parts between different commands.
+
 ![image](https://github.com/user-attachments/assets/19ba2a38-b315-4415-b96c-6338a59b6985)
 
 As you can see in the demo video below, since modern cars nowadays have implemented the proprietary rolling code mechanism, we can only replay the unlock command once.
@@ -171,8 +172,9 @@ The 32-bits rolling code contains key information such as counters to prevent a 
 
 ![image](https://github.com/user-attachments/assets/f4059ac6-9cef-476c-a5c2-53542a57372a)
 
-
+<p align="justify">
 As mentioned earlier, if the default manufacturer key has been used. We can decrypt the 32-bits rolling codes with the program, you can see the rolling code in sequence in the decrypted message, which matches the starting value of 2600 we set earlier.
+</p>
 
 ![image](https://github.com/user-attachments/assets/2736aebb-8ae4-4265-90bf-ac454d0c14ac)
 
@@ -184,7 +186,10 @@ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; pic
 allowfullscreen></iframe>
 
 ### 0x05. SUMMARY
+
+<p align="justify">
 In Part 2, we have looked at some of the advanced techniques, such as RollJAM; Rolling-PWN and Keeloq Decryption. However, there are many other types of encryption and rolling code algorithms to play with. Stay tuned.
+</p>
 
 ![image](https://github.com/user-attachments/assets/7b6393cb-1021-4fbc-8b60-0bda191ecaa8)
 
