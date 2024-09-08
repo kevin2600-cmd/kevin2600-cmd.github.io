@@ -117,7 +117,9 @@ The CVE-2021-46145 has assigned to this bug, and I have written an article dedic
 
 ![image](https://github.com/user-attachments/assets/5ca2d08c-81a8-4a96-b723-c989bcf366b8)
 
+<p align="justify">
 Moreover, Honda officially acknowledge the bug. However, Honda concluded this is a low risk to customers, and Honda regularly improves security features as new models are introduced that would thwart this and similar approaches. Fingers crossed.
+</p>
 
 ![image](https://github.com/user-attachments/assets/cda6a119-5d9a-439c-8eb3-9f410dff98d6)
 
