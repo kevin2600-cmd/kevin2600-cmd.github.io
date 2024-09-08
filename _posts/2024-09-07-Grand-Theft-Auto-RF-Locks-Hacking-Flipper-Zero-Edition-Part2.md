@@ -40,7 +40,7 @@ As you can see in the demo video below, we only need to capture the unlocking co
 title="YouTube video player" frameborder="0" 
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
-
+<br>
 
 <p align="justify">
 In addition, Flipper-Zero can add some well-known keyfobs protocols manually. Take LiftMaster_315 as an example. It implemented a rolling code mechanism. However, as you can see in the pics below, the counter value is predictable, so does the key. Therefore, it is very easy to capture then spoof an unlock command to such system.
@@ -80,6 +80,7 @@ As you can see in the demo video below, since modern cars nowadays have implemen
 title="YouTube video player" frameborder="0" 
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
+<br>
 
 <p align="justify">
 Years ago, a security researcher, Samy Kamkar, came up with an idea that can manipulate certain rolling code system. He called it the Rolljam Attack. How Rolljam attack works is well explained in the slides below. The Rolljam attack works by jamming the target radio signal at slightly deviated frequency and recording the signal at tight receiver filter bandwidth from the keyfob at the same time. Since the first unlock signal is blocked, the car door will not unlock and the car owner will likely try again. Attacker can again record and block the second signal, but this time the attackers also replays the first code to unlock the car door.
@@ -93,6 +94,7 @@ As you can see in the demo video of rolljam attack below, the HackRF has been us
 title="YouTube video player" frameborder="0" 
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
+<br>
 
 Since Rolljam attack needs a jammer and recorder work at the same time, we can use HackRF and Flipper-Zero as combo tools for this attack.
 
@@ -110,6 +112,7 @@ In year 2021, I have found a very interesting yet scary car lock vulnerability, 
 title="YouTube video player" frameborder="0" 
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
+<br>
 
 <p align="justify">
 The CVE-2021-46145 has assigned to this bug, and I have written an article dedicated to this bug (https://rollingpwn.github.io/rolling-pwn). Special thanks to researcher, Rob Stumpf helped us to verify the bug with his own 2021 Honda Accord from the US.
@@ -187,6 +190,7 @@ As you can see the video below, we can spoof a new command to turn on the light.
 title="YouTube video player" frameborder="0" 
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
+<br>
 
 ### 0x05. SUMMARY
 
