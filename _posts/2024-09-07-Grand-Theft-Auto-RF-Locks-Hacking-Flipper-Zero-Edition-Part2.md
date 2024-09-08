@@ -169,6 +169,9 @@ After analyzing the packets with URH, we can see that the 28-bit serial number i
 
 The 32-bits rolling code contains key information such as counters to prevent a replay attack.
 
+![image](https://github.com/user-attachments/assets/f4059ac6-9cef-476c-a5c2-53542a57372a)
+
+
 As mentioned earlier, if the default manufacturer key has been used. We can decrypt the 32-bits rolling codes with the program, you can see the rolling code in sequence in the decrypted message, which matches the starting value of 2600 we set earlier.
 
 ![image](https://github.com/user-attachments/assets/2736aebb-8ae4-4265-90bf-ac454d0c14ac)
