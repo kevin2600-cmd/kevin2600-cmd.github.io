@@ -71,10 +71,13 @@ So here is a trick, when we like to see if the vehicle is vulnerable to the BLE 
 ![8](https://github.com/user-attachments/assets/42da7ae7-b436-443f-b2f4-fa2e60e31e8a)
 ![9](https://github.com/user-attachments/assets/d107dc4a-69e3-42f7-83a0-eda74d3175e7)
 
+### THE FAILURE
 
-THE FAILURE
-
+<p align="justify">
 Just like any science experiment, success was not always the case. During the test, we failed to perform the BLE Relay attack on some of the targets with Gattacker. One clear sign is these vendors have enabled the PIN codes requirement during the beginning of the pairing stage, which is out of the capability of Gattacker since Gattacker only works for the target do not implement the BLE link-layer pairing/encryption.
+</p>
+
+<img width="524" alt="10" src="https://github.com/user-attachments/assets/4d4657d9-5e67-4231-998d-fbe6275325a1">
 
 
 On 2022 May 15, a security researcher Sultan Qasim Khan from NCC group published a series of articles regarding his research. He has developed a tool for BLE relay attacks capable of relaying encrypted link layer communications. He has tested successfully on the Tesla Model 3 and other IOT products. However, he did not release the tool to the public. But he is kind enough to release another tool called Sniffle. Which is a sniffer for BLE 5 and 4 using TI CC1352/CC26x2 board. Moreover, he happened to use the same board to conduct the link layer BLE relay attack.
