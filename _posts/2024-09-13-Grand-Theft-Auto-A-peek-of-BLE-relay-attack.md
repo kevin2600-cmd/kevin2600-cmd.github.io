@@ -64,7 +64,9 @@ title="YouTube video player" frameborder="0"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 
-Once again, Gattacker worked very well. In the demo video, you'll notice that the attacker deliberately maintains a distance from the victim to simulate a real-world attack scenario.
+<p align="justify">
+Here's a trick: to check if a vehicle is vulnerable to a BLE relay attack, you can use any BLE app to attempt a connection. If no pairing is required, it may indicate a potential security issue.
+</p>
 
 ![6](https://github.com/user-attachments/assets/2cc7f617-b18f-41d3-a5c8-9280604a3b83)
 ![Screenshot from 2024-09-13 15-23-40](https://github.com/user-attachments/assets/e6940323-1969-4464-9d3b-cc05fa1ecc85)
