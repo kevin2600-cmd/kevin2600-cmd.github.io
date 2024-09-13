@@ -55,6 +55,7 @@ So, one question remains: does this method work on other modern vehicles that al
 
 ![5](https://github.com/user-attachments/assets/1c5b114a-1091-4dde-96be-1631594c1336)
 
+
 <p align="justify">
 Once again, the Gattacker work very well. And notice that in the demo video, the attacker purposely keeps a distance from the victim, to emulate the real attack.
 </p>
@@ -63,6 +64,7 @@ Once again, the Gattacker work very well. And notice that in the demo video, the
 title="YouTube video player" frameborder="0" 
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
+
 
 <p align="justify">
 Here's a trick: to check if a vehicle is vulnerable to a BLE relay attack, you can use any BLE app to attempt a connection. If no pairing is required, it may indicate a potential security issue.
