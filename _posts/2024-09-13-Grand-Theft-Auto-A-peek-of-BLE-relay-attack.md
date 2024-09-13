@@ -50,7 +50,7 @@ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; pic
 allowfullscreen></iframe>
 
 <p align="justify">
-So, one question remains: does this method work on other modern vehicles that also implement the PhoneKey function? In recent years, the smart car industry has been booming in China, and nearly everyone wants a piece of it. I have to admit, some of these are quite good cars. However, when it comes to security, there's still room for improvement. Below is an example of one of the most popular smart cars in China. We easily connected to it using a BLE application, with no pairing required. This is either a good—or perhaps a bad—sign, depending on how you look at it.
+So, one question remains: does this method work on other modern vehicles that also implement the PhoneKey function? In recent years, the smart car industry has been booming in China, and nearly everyone wants a piece of it. I have to admit, some of these are quite good cars. However, when it comes to security, there's still room for improvement. Below is an example of one of the most popular smart cars in China XiaoPeng P7. We easily connected to it using a BLE application, with no pairing required. This is either a good—or perhaps a bad—sign, depending on how you look at it.
 </p>
 
 ![5](https://github.com/user-attachments/assets/1c5b114a-1091-4dde-96be-1631594c1336)
