@@ -79,39 +79,45 @@ Just like any science experiment, success was not always the case. During the te
 
 <img width="524" alt="10" src="https://github.com/user-attachments/assets/4d4657d9-5e67-4231-998d-fbe6275325a1">
 
-
+<p align="justify">
 On 2022 May 15, a security researcher Sultan Qasim Khan from NCC group published a series of articles regarding his research. He has developed a tool for BLE relay attacks capable of relaying encrypted link layer communications. He has tested successfully on the Tesla Model 3 and other IOT products. However, he did not release the tool to the public. But he is kind enough to release another tool called Sniffle. Which is a sniffer for BLE 5 and 4 using TI CC1352/CC26x2 board. Moreover, he happened to use the same board to conduct the link layer BLE relay attack.
+</p>
 
 <img width="945" alt="11" src="https://github.com/user-attachments/assets/feb6bc10-1a2a-417d-8bd4-371d7b3c7f2e">
 
-
-
+<p align="justify">
 Around 2022 Oct, a group of researchers from Team XWZ claimed they reproduced Sultan's link layer relay attack, and successfully demonstrated it on Tesla Model 3. However, at the time of writing, they also failed to attack certain models of cars. One possibility is those vendors may implement an extra security mechanism to prevent the BLE relay attack like this.
-
+</p>
 
 ### ONE MORE THING
 
+<p align="justify">
 On 2019 August, security researcher Martin Herfurt published a project called Tesla Radar. He found that Tesla vehicles constantly broadcast a signal that anyone can detect. In addition, the owner cannot disable such unique hashed iBeacon IDs sent from Tesla vehicles. Anyone concerned about their privacy will likely think this an issue, since anyone can track any Tesla vehicles in this way.
+</p>
 
 <img width="522" alt="12" src="https://github.com/user-attachments/assets/0ee25b94-6448-40a5-96e6-77e80233aa94">
 
-
-
+<p align="justify">
 During the research we came across some vendors has a similar issue, and instead of broadcast a hashed ID, they were broadcast the vehicle VIN number in plaintext. Now some people may argue VIN number is a public information. This is true. However, because vendors chose to broadcast the VIN, does helped us to locate the target cars in the parking lots very quick.
+</p>
 
 ![13](https://github.com/user-attachments/assets/8b7dddf5-2529-47bf-924e-78e1d73bbc63)
 
 
 ### FINAL THOUGHT
 
+<p align="justify">
 Our findings have already been reported to the respective vendors. However, we experienced that sometimes due to the downstream dependencies on multiple vendors; it seems very difficult for some vendor to produce a patch. This clearly shows the complexity of resolving vehicle vulnerabilities, fingers crossed.
-
-On 2020 AUG, I presented my research NFC Relay attack on Tesla Model 3 at DEFCON. Just like for BLE Relay attack, response from Tesla are the same, that relay attacks are a known limitation of the passive entry system. Users should be encouraged to use the PIN to Drive feature. However, years ago we found a bug that can bypass the PIN2Drive. And this made us into the Tesla Hall of Fame. Year later researcher Martin Herfurt found another bug, which can bypass the PIN2Drive too. Therefore, all the vendors should fully aware that the security of the products is indeed a long-term game.
+</p>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/de2-YcfEqmI" 
 title="YouTube video player" frameborder="0" 
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
+
+<p align="justify">
+On 2020 AUG, I presented my research NFC Relay attack on Tesla Model 3 at DEFCON. Just like for BLE Relay attack, response from Tesla are the same, that relay attacks are a known limitation of the passive entry system. Users should be encouraged to use the PIN to Drive feature. However, years ago we found a bug that can bypass the PIN2Drive. And this made us into the Tesla Hall of Fame. Year later researcher Martin Herfurt found another bug, which can bypass the PIN2Drive too. Therefore, all the vendors should fully aware that the security of the products is indeed a long-term game.
+</p>
 
 ### REFERENCES
 
