@@ -3,26 +3,26 @@
 ### HOW IT BEGIN
 
 <p align="justify">
-About 7 years ago, security researcher Stawomir Jasek released a tool called Gattacker. It aims to use as a Man-in-the-Middle and analysis tool for BLE devices. However, IOT Hacking was very popular at the time, but car hackers are still waiting for their moment. In 2022 MAY, an independent security researcher Martin Herfurt published a project called TEMPA, which presented several vulnerabilities he found on Tesla. One of his tricks to hack the Tesla PhoneKey was BLE Relay, and the tool he used was Gattacker.
+About 7 years ago, security researcher Stawomir Jasek released a tool called Gattacker. It was designed to function as a Man-in-the-Middle and analysis tool for BLE devices. At that time, IoT hacking was very popular, but car hackers were still waiting for their moment. In May 2022, independent security researcher Martin Herfurt published a project called TEMPA, which revealed several vulnerabilities he discovered in Tesla vehicles. One of his methods for hacking the Tesla PhoneKey system involved a BLE relay attack, and the tool he used was Gattacker.
 </p>
 
 ![1](https://github.com/user-attachments/assets/731cf701-38b3-4438-b547-2c5e30a4127e)
 
 <p align="justify">
-This immediately attracted my attention; in Martin’s article, he mentioned by using software like gattacker, it is possible to relay the information between the PhoneKey and the Tesla vehicle on a protocol level. Furthermore, the advantage of the protocol-based relay attack is the distance between the victim and the vehicle is not limited by physical constraints. This is sounds very exciting because that means we are not only able to drive away the Tesla, but the victim can be in any part of the world, as long as there is Internet access. However, it also brought up the questions like how reliable this method is. More importantly, does it work on other modern vehicles that also implement the Phonekey function?
+This immediately caught my attention. In Martin’s article, he mentioned that by using software like Gattacker, it is possible to relay information between the PhoneKey and the Tesla vehicle at the protocol level. Furthermore, the advantage of a protocol-based relay attack is that the distance between the victim and the vehicle is not constrained by physical proximity. This sounds very exciting because it means that not only could we potentially drive away the Tesla, but the victim could be anywhere in the world, as long as there is Internet access. However, this raises questions about how reliable this method is. More importantly, does it work on other modern vehicles that also implement the PhoneKey function?
 </p>
 
 <img width="715" alt="2" src="https://github.com/user-attachments/assets/96ec40f6-d97f-4bf7-8179-879f5c736d32">
 
 
 <p align="justify">
-Before we jump on to messing with all the cars, let us first understand some background knowledge of the BLE relay attack. The Tesla Model 3 and Y implement a BLE-based passive entry system called PhoneKey. As the name suggests, Tesla owners can use an authorized mobile phone to unlock and control the vehicle within a proximity range. In addition, all the cryptographic challenge-response operations were conducted over BLE. But here is a catch, even the Tesla PhoneKey has implemented the challenge-response as authenticate mechanism. They did not enable the BLE link-layer pairing/encryption, which make it the perfect target of Gattacker.
+Before we jump into tampering with cars, let's first understand some background on the BLE relay attack. The Tesla Model 3 and Model Y use a BLE-based passive entry system called PhoneKey. As the name suggests, Tesla owners can use an authorized mobile phone to unlock and control the vehicle within a certain proximity. Additionally, all cryptographic challenge-response operations are conducted over BLE. However, there’s a catch: although the Tesla PhoneKey uses challenge-response as an authentication mechanism, it does not enable BLE link-layer pairing or encryption. This makes it an ideal target for Gattacker.
 </p>
 
 ### THE SUCCESS
 
 <p align="justify">
-For the first attempt, we have Gattacker running on two laptops; relay the Tesla Model 3 traffic through a local WIFI connection. Turns out Martin was right. The 7 years old, Gattacker still works as a charm.
+For the first attempt, we had Gattacker running on two laptops, relaying the Tesla Model 3's traffic through a local Wi-Fi connection. It turns out Martin was right—despite being 7 years old, Gattacker still works like a charm.
 </p>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/1Vsf6irr4Sc" 
@@ -30,18 +30,18 @@ title="YouTube video player" frameborder="0"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 
-Then we tested it on Tesla Model Y. No surprise here, it open the car doors respectively.
+Next, we tested it on a Tesla Model Y. As expected, it successfully unlocked the car doors.
 
 ![3](https://github.com/user-attachments/assets/21b7c8cb-4b6c-473c-9aeb-de1e28c1fabd)
 
 <p align="justify">
-What about the long-distance relay attack? To achieve this goal, we have set up a publicly accessible VPN server. And running Gattacker on Raspberry PIs instead of the PCs.
+What about the long-distance relay attack? To achieve this, we set up a publicly accessible VPN server and ran Gattacker on Raspberry Pis instead of PCs.
 </p>
 
 ![4](https://github.com/user-attachments/assets/e1d5e77a-9251-4ec6-bb42-759f8f05bbbd)
 
 <p align="justify">
-The result is quite amazing; we have not just relayed the traffic over a long distance but crossed the city. As shown in the demo, we have successfully opened the door for Tesla in a completely different place.
+The result was quite amazing. Not only did we relay the traffic over a long distance, but we also crossed city boundaries. As demonstrated in the test, we successfully unlocked a Tesla located in a completely different area.
 </p>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ijio9_WJpH4" 
@@ -50,7 +50,7 @@ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; pic
 allowfullscreen></iframe>
 
 <p align="justify">
-So, one question remains, does it work on other modern vehicles that also implement the Phonekey function? In recent years, the smart-car business is booming in China, and almost everyone like to have part in it. I have to say some of them are quite good cars. But when come to security, they still have room to improve. Below is one of the most popular smart car in China. We are easily connected to it with a BLE application, no pairing is required. This is a good, ok maybe a bad sign, depending on how you see it.
+So, one question remains: does this method work on other modern vehicles that also implement the PhoneKey function? In recent years, the smart car industry has been booming in China, and nearly everyone wants a piece of it. I have to admit, some of these are quite good cars. However, when it comes to security, there's still room for improvement. Below is an example of one of the most popular smart cars in China. We easily connected to it using a BLE application, with no pairing required. This is either a good—or perhaps a bad—sign, depending on how you look at it.
 </p>
 
 ![5](https://github.com/user-attachments/assets/1c5b114a-1091-4dde-96be-1631594c1336)
@@ -64,7 +64,7 @@ title="YouTube video player" frameborder="0"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 
-So here is a trick, when we like to see if the vehicle is vulnerable to the BLE Relay attack, we can always use any BLE App to connect to it, if no pairing is needed, it may be a sign of a problem.
+Once again, Gattacker worked very well. In the demo video, you'll notice that the attacker deliberately maintains a distance from the victim to simulate a real-world attack scenario.
 
 ![6](https://github.com/user-attachments/assets/2cc7f617-b18f-41d3-a5c8-9280604a3b83)
 ![Screenshot from 2024-09-13 15-23-40](https://github.com/user-attachments/assets/e6940323-1969-4464-9d3b-cc05fa1ecc85)
@@ -74,31 +74,31 @@ So here is a trick, when we like to see if the vehicle is vulnerable to the BLE 
 ### THE FAILURE
 
 <p align="justify">
-Just like any science experiment, success was not always the case. During the test, we failed to perform the BLE Relay attack on some of the targets with Gattacker. One clear sign is these vendors have enabled the PIN codes requirement during the beginning of the pairing stage, which is out of the capability of Gattacker since Gattacker only works for the target do not implement the BLE link-layer pairing/encryption.
+Like any scientific experiment, success was not always guaranteed. During the tests, we were unable to perform the BLE relay attack on some targets using Gattacker. One clear indicator is that these vendors have enabled PIN code requirements during the initial pairing stage. This is beyond the capabilities of Gattacker, which only works on targets that do not implement BLE link-layer pairing or encryption.
 </p>
 
 <img width="524" alt="10" src="https://github.com/user-attachments/assets/4d4657d9-5e67-4231-998d-fbe6275325a1">
 
 <p align="justify">
-On 2022 May 15, a security researcher Sultan Qasim Khan from NCC group published a series of articles regarding his research. He has developed a tool for BLE relay attacks capable of relaying encrypted link layer communications. He has tested successfully on the Tesla Model 3 and other IOT products. However, he did not release the tool to the public. But he is kind enough to release another tool called Sniffle. Which is a sniffer for BLE 5 and 4 using TI CC1352/CC26x2 board. Moreover, he happened to use the same board to conduct the link layer BLE relay attack.
+On May 15, 2022, security researcher Sultan Qasim Khan from the NCC Group published a series of articles detailing his research. He developed a tool for BLE relay attacks capable of relaying encrypted link-layer communications. This tool was successfully tested on the Tesla Model 3 and other IoT products. However, he did not release this tool to the public. Instead, he released another tool called Sniffle, which is a sniffer for BLE 5 and 4, using the TI CC1352/CC26x2 board. Interestingly, he used the same board to conduct the link-layer BLE relay attack.
 </p>
 
 <img width="945" alt="11" src="https://github.com/user-attachments/assets/feb6bc10-1a2a-417d-8bd4-371d7b3c7f2e">
 
 <p align="justify">
-Around 2022 Oct, a group of researchers from Team XWZ claimed they reproduced Sultan's link layer relay attack, and successfully demonstrated it on Tesla Model 3. However, at the time of writing, they also failed to attack certain models of cars. One possibility is those vendors may implement an extra security mechanism to prevent the BLE relay attack like this.
+Around October 2022, a group of researchers from Team XWZ claimed to have reproduced Sultan's link-layer relay attack and successfully demonstrated it on the Tesla Model 3. However, as of the time of writing, they also encountered difficulties attacking certain car models. One possibility is that these vendors may have implemented additional security mechanisms to prevent such BLE relay attacks.
 </p>
 
 ### ONE MORE THING
 
 <p align="justify">
-On 2019 August, security researcher Martin Herfurt published a project called Tesla Radar. He found that Tesla vehicles constantly broadcast a signal that anyone can detect. In addition, the owner cannot disable such unique hashed iBeacon IDs sent from Tesla vehicles. Anyone concerned about their privacy will likely think this an issue, since anyone can track any Tesla vehicles in this way.
+In August 2019, security researcher Martin Herfurt published a project called Tesla Radar. He discovered that Tesla vehicles continuously broadcast a signal that anyone can detect. Furthermore, owners cannot disable these unique hashed iBeacon IDs sent from the vehicles. This could be a privacy concern, as it allows anyone to track Tesla vehicles using this signal.
 </p>
 
 <img width="522" alt="12" src="https://github.com/user-attachments/assets/0ee25b94-6448-40a5-96e6-77e80233aa94">
 
 <p align="justify">
-During the research we came across some vendors has a similar issue, and instead of broadcast a hashed ID, they were broadcast the vehicle VIN number in plaintext. Now some people may argue VIN number is a public information. This is true. However, because vendors chose to broadcast the VIN, does helped us to locate the target cars in the parking lots very quick.
+During the research, we discovered that some vendors have a similar issue. Instead of broadcasting a hashed ID, they broadcast the vehicle’s VIN number in plaintext. While it is true that VIN numbers are public information, broadcasting them in plaintext makes it easier to locate target vehicles quickly in parking lots.
 </p>
 
 ![13](https://github.com/user-attachments/assets/8b7dddf5-2529-47bf-924e-78e1d73bbc63)
@@ -107,7 +107,7 @@ During the research we came across some vendors has a similar issue, and instead
 ### FINAL THOUGHT
 
 <p align="justify">
-Our findings have already been reported to the respective vendors. However, we experienced that sometimes due to the downstream dependencies on multiple vendors; it seems very difficult for some vendor to produce a patch. This clearly shows the complexity of resolving vehicle vulnerabilities, fingers crossed.
+Our findings have been reported to the respective vendors. However, we have experienced that, due to dependencies on multiple downstream vendors, it can be very challenging for some vendors to produce a patch. This highlights the complexity of addressing vehicle vulnerabilities. Fingers crossed for a resolution.
 </p>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/de2-YcfEqmI" 
@@ -116,7 +116,7 @@ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; pic
 allowfullscreen></iframe>
 
 <p align="justify">
-On 2020 AUG, I presented my research NFC Relay attack on Tesla Model 3 at DEFCON. Just like for BLE Relay attack, response from Tesla are the same, that relay attacks are a known limitation of the passive entry system. Users should be encouraged to use the PIN to Drive feature. However, years ago we found a bug that can bypass the PIN2Drive. And this made us into the Tesla Hall of Fame. Year later researcher Martin Herfurt found another bug, which can bypass the PIN2Drive too. Therefore, all the vendors should fully aware that the security of the products is indeed a long-term game.
+In August 2020, I presented my research on NFC relay attacks on the Tesla Model 3 at DEFCON. Similar to the response regarding BLE relay attacks, Tesla acknowledged that relay attacks are a known limitation of their passive entry system and recommended using the PIN to Drive feature. However, years ago, we discovered a bug that could bypass the PIN2Drive, which earned us a spot in the Tesla Hall of Fame. Later, researcher Martin Herfurt identified another bug that also bypassed PIN2Drive. This underscores the fact that the security of such products is indeed a long-term endeavor, and vendors must remain vigilant.
 </p>
 
 
