@@ -119,18 +119,16 @@ allowfullscreen></iframe>
 On 2020 AUG, I presented my research NFC Relay attack on Tesla Model 3 at DEFCON. Just like for BLE Relay attack, response from Tesla are the same, that relay attacks are a known limitation of the passive entry system. Users should be encouraged to use the PIN to Drive feature. However, years ago we found a bug that can bypass the PIN2Drive. And this made us into the Tesla Hall of Fame. Year later researcher Martin Herfurt found another bug, which can bypass the PIN2Drive too. Therefore, all the vendors should fully aware that the security of the products is indeed a long-term game.
 </p>
 
+
 ### REFERENCES
 
 https://bugcrowd.com/Kevin_2600
-https://www.teslaradar.com/faq/
-https://github.com/nccgroup/Sniffle
+
 https://rollingpwn.github.io/rolling-pwn/
-https://securepositioning.com/ghost-peak/
+
 https://trifinite.org/stuff/tempa_relay_attack/
-https://www.youtube.com/watch?v=nn-_3AbtEkI (NFC Relay on Tesla)
+
 https://research.nccgroup.com/2022/05/15/technical-advisory-tesla-ble-phone-as-a-key-passive-entry-vulnerable-to-relay-attacks/
-
-
 
 
 
