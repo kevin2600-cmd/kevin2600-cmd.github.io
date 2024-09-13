@@ -12,7 +12,8 @@ About 7 years ago, security researcher Stawomir Jasek released a tool called Gat
 This immediately attracted my attention; in Martin’s article, he mentioned by using software like gattacker, it is possible to relay the information between the PhoneKey and the Tesla vehicle on a protocol level. Furthermore, the advantage of the protocol-based relay attack is the distance between the victim and the vehicle is not limited by physical constraints. This is sounds very exciting because that means we are not only able to drive away the Tesla, but the victim can be in any part of the world, as long as there is Internet access. However, it also brought up the questions like how reliable this method is. More importantly, does it work on other modern vehicles that also implement the Phonekey function?
 </p>
 
-file:///home/kevin2600/My%20Notes/BLOG-2024/BLE-Relay-Aattck-main/images/2.png
+<img width="715" alt="2" src="https://github.com/user-attachments/assets/96ec40f6-d97f-4bf7-8179-879f5c736d32">
+
 
 <p align="justify">
 Before we jump on to messing with all the cars, let us first understand some background knowledge of the BLE relay attack. The Tesla Model 3 and Y implement a BLE-based passive entry system called PhoneKey. As the name suggests, Tesla owners can use an authorized mobile phone to unlock and control the vehicle within a proximity range. In addition, all the cryptographic challenge-response operations were conducted over BLE. But here is a catch, even the Tesla PhoneKey has implemented the challenge-response as authenticate mechanism. They did not enable the BLE link-layer pairing/encryption, which make it the perfect target of Gattacker.
