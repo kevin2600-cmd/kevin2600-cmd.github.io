@@ -1,4 +1,4 @@
-## Grand Theft Auto A peek of BLE relay attack
+## Grand Theft Auto - A peek of BLE relay attack
 
 ### HOW IT BEGIN
 
