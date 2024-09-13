@@ -90,7 +90,7 @@ On May 15, 2022, security researcher Sultan Qasim Khan from the NCC Group publis
 <img width="945" alt="11" src="https://github.com/user-attachments/assets/feb6bc10-1a2a-417d-8bd4-371d7b3c7f2e">
 
 <p align="justify">
-Around October 2022, a group of researchers from Security Team Xiaomi claimed to have reproduced Sultan's link-layer relay attack and successfully demonstrated it on the Tesla Model 3. However, as of the time of writing, they also encountered difficulties attacking certain car models. One possibility is that these vendors may have implemented additional security mechanisms to prevent such BLE relay attacks.
+Around October 2022, a group of researchers from Xiaomi Security Team claimed to have reproduced Sultan's link-layer relay attack and successfully demonstrated it on the Tesla Model 3. However, as of the time of writing, they also encountered difficulties attacking certain car models. One possibility is that these vendors may have implemented additional security mechanisms to prevent such BLE relay attacks.
 </p>
 
 ### ONE MORE THING
