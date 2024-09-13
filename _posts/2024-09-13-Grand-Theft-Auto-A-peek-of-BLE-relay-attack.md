@@ -121,6 +121,7 @@ On 2020 AUG, I presented my research NFC Relay attack on Tesla Model 3 at DEFCON
 
 ### REFERENCES
 
+<p align="justify">
 . https://bugcrowd.com/Kevin_2600
 · https://www.teslaradar.com/faq/
 · https://github.com/nccgroup/Sniffle
@@ -129,7 +130,7 @@ On 2020 AUG, I presented my research NFC Relay attack on Tesla Model 3 at DEFCON
 · https://trifinite.org/stuff/tempa_relay_attack/
 · https://www.youtube.com/watch?v=nn-_3AbtEkI (NFC Relay on Tesla)/
 · https://research.nccgroup.com/2022/05/15/technical-advisory-tesla-ble-phone-as-a-key-passive-entry-vulnerable-to-relay-attacks/
-
+</p>
 
 
 
