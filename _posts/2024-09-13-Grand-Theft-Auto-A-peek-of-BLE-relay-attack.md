@@ -30,23 +30,46 @@ title="YouTube video player" frameborder="0"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 
-
-
 Then we tested it on Tesla Model Y. No surprise here, it open the car doors respectively.
 
+![3](https://github.com/user-attachments/assets/21b7c8cb-4b6c-473c-9aeb-de1e28c1fabd)
 
+<p align="justify">
 What about the long-distance relay attack? To achieve this goal, we have set up a publicly accessible VPN server. And running Gattacker on Raspberry PIs instead of the PCs.
+</p>
 
+![4](https://github.com/user-attachments/assets/e1d5e77a-9251-4ec6-bb42-759f8f05bbbd)
 
+<p align="justify">
 The result is quite amazing; we have not just relayed the traffic over a long distance but crossed the city. As shown in the demo, we have successfully opened the door for Tesla in a completely different place.
+</p>
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ijio9_WJpH4" 
+title="YouTube video player" frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+
+<p align="justify">
 So, one question remains, does it work on other modern vehicles that also implement the Phonekey function? In recent years, the smart-car business is booming in China, and almost everyone like to have part in it. I have to say some of them are quite good cars. But when come to security, they still have room to improve. Below is one of the most popular smart car in China. We are easily connected to it with a BLE application, no pairing is required. This is a good, ok maybe a bad sign, depending on how you see it.
+</p>
 
+![5](https://github.com/user-attachments/assets/1c5b114a-1091-4dde-96be-1631594c1336)
 
+<p align="justify">
 Once again, the Gattacker work very well. And notice that in the demo video, the attacker purposely keeps a distance from the victim, to emulate the real attack.
+</p>
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/syj-rghnQRk" 
+title="YouTube video player" frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
 
 So here is a trick, when we like to see if the vehicle is vulnerable to the BLE Relay attack, we can always use any BLE App to connect to it, if no pairing is needed, it may be a sign of a problem.
+
+![6](https://github.com/user-attachments/assets/2cc7f617-b18f-41d3-a5c8-9280604a3b83)
+![Screenshot from 2024-09-13 15-23-40](https://github.com/user-attachments/assets/e6940323-1969-4464-9d3b-cc05fa1ecc85)
+![8](https://github.com/user-attachments/assets/42da7ae7-b436-443f-b2f4-fa2e60e31e8a)
+![9](https://github.com/user-attachments/assets/d107dc4a-69e3-42f7-83a0-eda74d3175e7)
 
 
 THE FAILURE
