@@ -82,6 +82,29 @@ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; pic
 allowfullscreen></iframe>
 <br>
 
+<p align="justify">
+If we had enough budget, we could rent cars for testing. But what if we're working with a limited budget and need to test the latest modern vehicles? One advantage of living in a big city is being surrounded by car dealerships, which provide the perfect opportunity for testing. This time, we found four cars affected by Braktooth. The first one is the NIO ET5, a popular Chinese brand.
+</p>
+
+![NIO-ET5](https://github.com/user-attachments/assets/f8d6e4a4-cba5-4c30-af9f-57bce80f3610)
+
+For the NIO ET5, Braktooth immediately disconnects the Bluetooth connection.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MbLr1RKdfOE" 
+title="YouTube video player" frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+<br>
+
+
+
+
+
+
+
+
+
+
 
 
 
