@@ -96,13 +96,33 @@ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; pic
 allowfullscreen></iframe>
 <br>
 
+Next, we tested the Volkswagen ID4X. Compared to other Android-based IVI systems, the ID4X seems less user-friendly and harder to navigate.
 
+![VW-ID4X](https://github.com/user-attachments/assets/a11fa9e9-3497-4ad4-817c-aef2f75bf356)
 
+Again once we fired the attack, the Bluetooth connection disconnected.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qLdSbJ2QIgA" 
+title="YouTube video player" frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+<br>
 
+<p align="justify">
+Finally, we tested a new car brand in the Chinese market called ARCFOX aS. As shown in the video, the music started behaving strangely once we launched the attack.
+<br>
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fy-P7Z_fZB4" 
+title="YouTube video player" frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+<br>
 
+<p align="justify">
+A unique aspect of this brand is that one of its car models uses Huawei's HarmonyOS as the IVI system. However, when it comes to low-level Bluetooth attacks, Huawei's HarmonyOS offers no additional protection.
+<br>
 
+![Arcfox-Hi](https://github.com/user-attachments/assets/c4d26a53-9e92-44dc-99f9-e422e13a6122)
 
 
 
