@@ -154,7 +154,6 @@ allowfullscreen></iframe>
 <p align="justify">
 As white-hat security researchers, we strive to follow the responsible disclosure procedure. Unfortunately, unlike many internet companies, most car manufacturers are still behind the curve. They often lack a bounty program and do not provide clear contact information for reporting bugs. As a result, we have submitted our reports to their customer service departments, hoping that someone will address them. However, we did receive feedback from both Tesla and NIO. Both companies have established bug bounty programs and responded very quickly to our reports. Nonetheless, NIO and Tesla informed us that the reported bug falls outside their scope.
 </p>
-<br>
 
 ### REFERENCES
 
