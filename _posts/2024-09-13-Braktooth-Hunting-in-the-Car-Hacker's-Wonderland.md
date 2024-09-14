@@ -139,17 +139,28 @@ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; pic
 allowfullscreen></iframe>
 <br>
 
+Both the BMW 5 Series and the 7 Series are affected by the Braktooth attack.
+
+![B1](https://github.com/user-attachments/assets/d82fdaa7-c03b-4c1f-ab91-2d0b58c457e2)
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/1fIfEV6X-H8" 
 title="YouTube video player" frameborder="0" 
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 <br>
 
-Both the BMW 5 Series and the 7 Series are affected by the Braktooth attack.
+### FINAL-FHOUGHT
 
+<p align="justify">
+As white-hat security researchers, we strive to follow the responsible disclosure procedure. Unfortunately, unlike many internet companies, most car manufacturers are still behind the curve. They often lack a bounty program and do not provide clear contact information for reporting bugs. As a result, we have submitted our reports to their customer service departments, hoping that someone will address them. However, we did receive feedback from both Tesla and NIO. Both companies have established bug bounty programs and responded very quickly to our reports. Nonetheless, NIO and Tesla informed us that the reported bug falls outside their scope.
+</p>
+<br>
 
+### REFERENCES
 
-
+· https://asset-group.github.io/disclosures/braktooth/
+· https://github.com/Matheus-Garbelini/braktooth_esp32_bluetooth_classic_attacks
+· https://naehrdine.blogspot.com/2021/09/hunting-ghosts-in-bluetooth-firmware.html
 
 
 
