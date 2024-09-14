@@ -22,14 +22,7 @@ For in-vehicle infotainment (IVI) systems, the paper specifically mentions the V
 ### FIRST-BLOOD
 
 <p align="justify">
-Before diving into testing with cars, we need to familiarize ourselves with Braktooth. Setting up the actual environment is quite straightforward. According to the paper, certain chipsets from MediaTek are affected. My Lenovo L14 laptop uses a Ralink chipset for Bluetooth communication. Since Ralink is part of the MediaTek group, it is an ideal candidate for testing.
-</p>
-
-![Volvo Technology](https://github.com/user-attachments/assets/3f014378-90e4-4451-9c7b-4ba5b73813ef)
-
-
-<p align="justify">
-Since there are 16 proof-of-concepts (POCs) for the Braktooth vulnerabilities, we need to test each one. We found that one particular vulnerability, called Invalid-Timing-Accuracy, almost always works. Vulnerable chipsets fail to properly handle the reception of a malformed LMP timing accuracy response, especially when followed by multiple reconnections to the target link slave.
+Before diving into testing with cars, we need to familiarize ourselves with Braktooth. Setting up the actual environment is quite straightforward. According to the paper, certain chipsets from MediaTek are affected. My Lenovo L14 laptop uses a Ralink chipset for Bluetooth communication. Since Ralink is part of the MediaTek group, it is an ideal candidate for testing. Since there are 16 proof-of-concepts (POCs) for the Braktooth vulnerabilities, we need to test each one. We found that one particular vulnerability, called Invalid-Timing-Accuracy, almost always works. Vulnerable chipsets fail to properly handle the reception of a malformed LMP timing accuracy response, especially when followed by multiple reconnections to the target link slave.
 </p>
 
 
