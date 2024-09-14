@@ -110,7 +110,7 @@ allowfullscreen></iframe>
 
 <p align="justify">
 Finally, we tested a new car brand in the Chinese market called ARCFOX aS. As shown in the video, the music started behaving strangely once we launched the attack.
-<br>
+</p>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/fy-P7Z_fZB4" 
 title="YouTube video player" frameborder="0" 
@@ -120,9 +120,32 @@ allowfullscreen></iframe>
 
 <p align="justify">
 A unique aspect of this brand is that one of its car models uses Huawei's HarmonyOS as the IVI system. However, when it comes to low-level Bluetooth attacks, Huawei's HarmonyOS offers no additional protection.
-<br>
+</p>
 
 ![Arcfox-Hi](https://github.com/user-attachments/assets/c4d26a53-9e92-44dc-99f9-e422e13a6122)
+
+<p align="justify">
+Another great location for testing is a car exhibition. The advantage of an exhibition is that we might have the opportunity to test some high-end sports cars that we wouldn’t normally have access to. Here, we tested the Leapmotor C01.
+</p>
+
+![Car exhibition](https://github.com/user-attachments/assets/c9f52394-4889-4416-833f-73194b0feba2)
+<br>
+![Leapmotor-C01](https://github.com/user-attachments/assets/2693b2ac-b50f-4064-a89f-bdc8672896a1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
