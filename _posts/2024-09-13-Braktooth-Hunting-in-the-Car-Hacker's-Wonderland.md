@@ -125,7 +125,7 @@ A unique aspect of this brand is that one of its car models uses Huawei's Harmon
 ![Arcfox-Hi](https://github.com/user-attachments/assets/c4d26a53-9e92-44dc-99f9-e422e13a6122)
 
 <p align="justify">
-Another great location for testing is a car exhibition. The advantage of an exhibition is that we might have the opportunity to test some high-end sports cars that we wouldn’t normally have access to. Here, we tested the Leapmotor C01.
+Another great location for testing is a car exhibition. The advantage of an exhibition is that we might have the opportunity to test some high-end sports cars that we wouldn’t normally have access to. So Watch out, Hackers are at work ;) Here, we tested the Leapmotor C01 and BMW THE 5, THE 7.
 </p>
 
 ![Car exhibition](https://github.com/user-attachments/assets/c9f52394-4889-4416-833f-73194b0feba2)
@@ -133,9 +133,19 @@ Another great location for testing is a car exhibition. The advantage of an exhi
 ![Leapmotor-C01](https://github.com/user-attachments/assets/2693b2ac-b50f-4064-a89f-bdc8672896a1)
 
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BZ4hzSNnK2M" 
+title="YouTube video player" frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+<br>
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1fIfEV6X-H8" 
+title="YouTube video player" frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+<br>
 
-
+Both the BMW 5 Series and the 7 Series are affected by the Braktooth attack.
 
 
 
