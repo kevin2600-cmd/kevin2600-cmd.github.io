@@ -49,6 +49,7 @@ The easiest place to start is to have the car components on the test bench. For 
 title="YouTube video player" frameborder="0" 
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
+<br>
 
 <p align="justify">
 Another place to look for potential targets is the parking lot. If approached politely, most people are often interested in seeing if their cars can be hacked. At that time, we had access to two Tesla cars and one Changan Uni-T for testing. For the Tesla Model 3 and Model X, only the Invalid-Setup-Complete POC was successful; all other POCs failed.
