@@ -158,9 +158,11 @@ As white-hat security researchers, we strive to follow the responsible disclosur
 
 ### REFERENCES
 
-· https://asset-group.github.io/disclosures/braktooth/
-· https://github.com/Matheus-Garbelini/braktooth_esp32_bluetooth_classic_attacks
-· https://naehrdine.blogspot.com/2021/09/hunting-ghosts-in-bluetooth-firmware.html
+https://asset-group.github.io/disclosures/braktooth/
+
+https://github.com/Matheus-Garbelini/braktooth_esp32_bluetooth_classic_attacks
+
+https://naehrdine.blogspot.com/2021/09/hunting-ghosts-in-bluetooth-firmware.html
 
 
 
