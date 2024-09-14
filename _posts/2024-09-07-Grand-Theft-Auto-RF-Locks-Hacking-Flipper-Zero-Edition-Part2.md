@@ -52,28 +52,28 @@ Additionally, the Flipper Zero allows for manual addition of well-known key fob 
 ### 0x02. ROLLJAM ATTACK
 
 <p align="justify">
-Fortunately, most car manufacturers will not use such naive designs for the car door locks. They prefer to use their own proprietary encryption algorithms instead. As you can see in the picture below is a 2014 Jetta keyfob. Since Volkswagen keeps the algorithms secret, the flipper-zero is not able to recognize it. 
+Fortunately, most car manufacturers avoid using such simplistic designs for car door locks. Instead, they tend to rely on proprietary encryption algorithms. For example, as shown in the picture below, a 2014 Jetta key fob uses Volkswagen’s proprietary algorithms, which remain undisclosed. As a result, the Flipper Zero is unable to recognize or decode it.
 </p>
 
 ![image](https://github.com/user-attachments/assets/6be85cf0-30b2-45dd-8d41-0a5fedb8dbf1)
 
 <p align="justify">
-Again, we use URH for the analyzing Jetta keyfob packets. One nice feature of URH is that we can highlight the sequence of packets in color; this makes analyzing job much easier. Each valid sequence of commands will start with 10101000 in green as the sync-word. 
+Once again, we used URH to analyze the Jetta key fob packets. A helpful feature of URH is the ability to highlight packet sequences in color, which greatly simplifies the analysis process. Each valid command sequence begins with 10101000, highlighted in green as the sync word.
 </p>
 
 ![image](https://github.com/user-attachments/assets/9ddbe92e-87ca-4fa3-bbff-3c5f605b001b)
 
 <p align="justify">
-From the 305th to the 312th in red are operation commands. For example, 00011100 is the command to open the door, and 00101010 is the command to close the door. The blue part is the rolling codes that change every time. 
+From the 305th to the 312th bit, highlighted in red, are the operation commands. For example, 00011100 is the command to unlock the door, while 00101010 is the command to lock it. The blue section represents the rolling codes, which change with each use.
 </p>
 
 ![image](https://github.com/user-attachments/assets/10366914-a6bf-4d4c-a917-f3e74d75ab26)
 
-URH comes with a comparison function that can be used to compare and analyze the rolling code parts between different commands.
+URH includes a comparison feature, which allows for easy analysis and comparison of the rolling code segments between different commands.
 
 ![image](https://github.com/user-attachments/assets/19ba2a38-b315-4415-b96c-6338a59b6985)
 
-As you can see in the demo video below, since modern cars nowadays have implemented the proprietary rolling code mechanism, we can only replay the unlock command once.
+As demonstrated in the video below, because modern cars now implement proprietary rolling code mechanisms, we can only replay the unlock command a single time.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/kNzH_on9HlM" 
 title="YouTube video player" frameborder="0" 
@@ -82,12 +82,12 @@ allowfullscreen></iframe>
 <br>
 
 <p align="justify">
-Years ago, a security researcher, Samy Kamkar, came up with an idea that can manipulate certain rolling code system. He called it the Rolljam Attack. How Rolljam attack works is well explained in the slides below. The Rolljam attack works by jamming the target radio signal at slightly deviated frequency and recording the signal at tight receiver filter bandwidth from the keyfob at the same time. Since the first unlock signal is blocked, the car door will not unlock and the car owner will likely try again. Attacker can again record and block the second signal, but this time the attackers also replays the first code to unlock the car door.
+Years ago, security researcher Samy Kamkar developed an idea to manipulate certain rolling code systems, known as the Rolljam Attack. The mechanics of this attack are well-explained in the slides below. Rolljam works by jamming the target's radio signal at a slightly shifted frequency while simultaneously recording the signal using a receiver with a narrow filter bandwidth from the keyfob. Since the first unlock signal is blocked, the car door doesn’t unlock, and the car owner will likely try again. The attacker then records and blocks the second signal, but this time, they also replay the first code to unlock the car door.
 </p>
 
 ![image](https://github.com/user-attachments/assets/115d2625-dfde-410d-81a8-bb9a036a9bbd)
 
-As you can see in the demo video of rolljam attack below, the HackRF has been used as a signal jammer, and Yardstick 1 as the recorder and transmitter.
+As demonstrated in the Rolljam attack video below, HackRF is used as the signal jammer, while Yardstick 1 acts as both the recorder and transmitter.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Yesp2NRBiCM" 
 title="YouTube video player" frameborder="0" 
@@ -95,7 +95,7 @@ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; pic
 allowfullscreen></iframe>
 <br>
 
-Since Rolljam attack needs a jammer and recorder work at the same time, we can use HackRF and Flipper-Zero as combo tools for this attack.
+Since the Rolljam attack requires both a jammer and a recorder to work simultaneously, we can use HackRF and Flipper-Zero as a combination of tools for this attack.
 
 ![image](https://github.com/user-attachments/assets/21ffeec6-14fe-4ae9-bb89-841ea52f616c)
 
@@ -104,7 +104,7 @@ Since Rolljam attack needs a jammer and recorder work at the same time, we can u
 ### 0x03. ROLLING-PWN 
 
 <p align="justify">
-In year 2021, I have found a very interesting yet scary car lock vulnerability, which affected all Honda vehicles currently existing on the market globally from year 2012 up to year 2023. All Honda vehicles allow a replay of the already expired commands in a consecutive sequence to unlock the car door permanently. 
+In 2021, I discovered a highly concerning car lock vulnerability that affected all Honda vehicles on the global market from 2012 to 2023. This flaw allows the replay of previously expired commands in sequence, enabling the car door to be unlocked permanently.
 </p>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/BtYhD1X_L3A" 
@@ -114,19 +114,19 @@ allowfullscreen></iframe>
 <br>
 
 <p align="justify">
-The CVE-2021-46145 has assigned to this bug, and I have written an article dedicated to this bug (https://rollingpwn.github.io/rolling-pwn). Special thanks to researcher, Rob Stumpf helped us to verify the bug with his own 2021 Honda Accord from the US.
+The vulnerability was assigned CVE-2021-46145, and I wrote a dedicated article on this issue, which can be found at https://rollingpwn.github.io/rolling-pwn. Special thanks to researcher Rob Stumpf, who helped verify the bug using his 2021 Honda Accord from the US.
 </p>
 
 ![image](https://github.com/user-attachments/assets/5ca2d08c-81a8-4a96-b723-c989bcf366b8)
 
 <p align="justify">
-Moreover, Honda officially acknowledge the bug. However, Honda concluded this is a low risk to customers, and Honda regularly improves security features as new models are introduced that would thwart this and similar approaches. Fingers crossed.
+Moreover, Honda officially acknowledged the bug. However, Honda concluded that it poses a low risk to customers and that they regularly improve security features with new models to address this and similar vulnerabilities. Fingers crossed.
 </p>
 
 ![image](https://github.com/user-attachments/assets/cda6a119-5d9a-439c-8eb3-9f410dff98d6)
 
 <p align="justify">
-In later Aug 2022, group of researchers from Singapore presented a talk at Blackhat USA addressing the same issue, and they found out the bug also affected many other brands of cars. As we mentioned in the Rolling-Pwn article, we knew about this. However, we were keeping what other brands were also affected by the bug quiet at that time. Because we are busy preparing for a Pwn2own style hacker competition called Geekpwn, and one of our modern smart car targets for the competition is vulnerable to the bug. Luckily, we won second runner-up in the end. As you can see in the pic below, we were using a high gain antenna to pwned those two different brands of cars in a fairly long distance.
+In late August 2022, a group of researchers from Singapore presented a talk at Black Hat USA addressing the same issue and discovered that the bug also affected many other car brands. As mentioned in the Rolling-Pwn article, we were aware of this but kept information about other affected brands confidential at the time. We were busy preparing for Geekpwn, a Pwn2Own-style hacker competition, where one of our modern smart car targets was vulnerable to the bug. Fortunately, we secured second runner-up in the competition. As shown in the picture below, we used a high-gain antenna to compromise two different car brands from a considerable distance.
 </p>
 
 ![image](https://github.com/user-attachments/assets/357a6943-0d0c-4451-ade9-93f07746e50d)
@@ -136,26 +136,26 @@ In later Aug 2022, group of researchers from Singapore presented a talk at Black
 ### 0x04. KEELOQ DECRYPTION
 
 <p align="justify">
-In the world of crypto, there is a well-known Kerckhoff principle; a crypto system should be secure even if the attacker knows all the details about the system, except the secret key. However, have you ever wondered what happen if that secret key leaked from manufacturer or a default manufacturer key from the datasheet used in the final products? These kinds of incidents are not uncommon; remember the mifare crypto1 default key hacks, anyone? Let’s take a widely used rolling code algorithm called Keeloq as an example.
+In the world of cryptography, the well-known Kerckhoff's principle states that a cryptosystem should remain secure even if the attacker knows all the details about the system, except for the secret key. However, have you ever wondered what happens if that secret key is leaked by the manufacturer or if a default manufacturer key from the datasheet is used in the final products? Such incidents are not uncommon—remember the MIFARE Crypto1 default key hacks? Let’s take a widely used rolling code algorithm called Keeloq as an example.
 </p>
 
 ![image](https://github.com/user-attachments/assets/fe53e119-fbf7-4a8c-abbe-9cad0edf9f59)
 
 <p align="justify">
-KeeLoq is a proprietary cipher owned by Microchip. It is widely used in keyfob systems by car companies such as Honda, Toyota, Volvo, Volkswagen Group and so on. If we found HCS200 or HCS300 series chipset inside the keyfob, which means we are facing the Keeloq cipher based system. In March 2008, researchers from the Ruhr University, Bochum, broke the KeeLoq-based cipher with side-channel analysis. By measuring the power consumption of a device during encryption, the researchers can extract the manufacturer key from the receivers and the remote control.
+KeeLoq is a proprietary cipher owned by Microchip and is widely used in keyfob systems by car manufacturers such as Honda, Toyota, Volvo, Volkswagen Group, and others. If we find an HCS200 or HCS300 series chipset inside the keyfob, it indicates the use of the KeeLoq cipher. In March 2008, researchers from Ruhr University Bochum managed to break the KeeLoq-based cipher using side-channel analysis. By measuring the power consumption of a device during encryption, they were able to extract the manufacturer key from both the receiver and the remote control.
 </p>
 
 ![image](https://github.com/user-attachments/assets/9b73f89a-d684-45b1-bd94-822674436a4d)
 
 <p align="justify">
-When we connect the HCS201 chip to an oscilloscope or logic analyzer, we can see Keeloq's signal waveform. First, there will be a preamble at the start of the signal, followed by the rolling codes, serial number, function code and status code.
+When connecting the HCS201 chip to an oscilloscope or logic analyzer, we can observe KeeLoq's signal waveform. Initially, a preamble appears at the start of the signal, followed by the rolling code, serial number, function code, and status code.
 </p>
 
 ![image](https://github.com/user-attachments/assets/c0b350ad-0824-42ea-9387-13ef09ce3dd1)
 
 ![image](https://github.com/user-attachments/assets/a0c47e1f-1999-4541-8ffe-dc34e68b5a00)
 
-Keeloq data structure has a total of 66 bits, including 32 bits of rolling code, 28 bits of serial number, and 4 bits of button function code and 2 bits of status code. The encoding is PWM.
+The KeeLoq data structure consists of a total of 66 bits: 32 bits for the rolling code, 28 bits for the serial number, 4 bits for the button function code, and 2 bits for the status code. The encoding method used is Pulse Width Modulation (PWM).
 
 ![image](https://github.com/user-attachments/assets/e50a59fa-6ab0-4a71-910d-a357a1661b84)
 
@@ -165,7 +165,7 @@ In terms of encryption key generation, Keeloq has three modes: simple, standard 
 
 ![image](https://github.com/user-attachments/assets/5b3dc722-5b36-4912-8b6d-c257d2cb8ab0)
 
-We can use the simulator to demonstrate it in practice. Here we set the manufacturer's secret key to 0123456789ABCDEF, the serial number to 4141410, and the counter starts from 2600.
+We can use the simulator to demonstrate this in practice. In this example, we set the manufacturer's secret key to 0123456789ABCDEF, the serial number to 4141410, and the counter starts from 2600.
 
 ![image](https://github.com/user-attachments/assets/4eb6ef89-7b68-463d-ad62-ab9747fb2b2c)
 
@@ -178,7 +178,7 @@ The 32-bits rolling code contains key information such as counters to prevent a 
 ![image](https://github.com/user-attachments/assets/f4059ac6-9cef-476c-a5c2-53542a57372a)
 
 <p align="justify">
-As mentioned earlier, if the default manufacturer key has been used. We can decrypt the 32-bits rolling codes with the program, you can see the rolling code in sequence in the decrypted message, which matches the starting value of 2600 we set earlier.
+As mentioned earlier, if the default manufacturer key is used, we can decrypt the 32-bit rolling codes with the program. You will see the rolling codes in sequence in the decrypted message, which matches the starting value of 2600 that we set earlier.
 </p>
 
 ![image](https://github.com/user-attachments/assets/2736aebb-8ae4-4265-90bf-ac454d0c14ac)
@@ -193,7 +193,7 @@ allowfullscreen></iframe>
 ### 0x05. SUMMARY
 
 <p align="justify">
-In Part 2, we have looked at some of the advanced techniques, such as RollJAM; Rolling-PWN and Keeloq Decryption. However, there are many other types of encryption and rolling code algorithms to play with. Stay tuned.
+In Part 2, we explored some advanced techniques, such as RollJam, Rolling-PWN, and Keeloq decryption. However, there are many other types of encryption and rolling code algorithms to investigate. Stay tuned.
 </p>
 
 ![image](https://github.com/user-attachments/assets/7b6393cb-1021-4fbc-8b60-0bda191ecaa8)
