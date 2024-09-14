@@ -72,7 +72,15 @@ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; pic
 allowfullscreen></iframe>
 <br>
 
+<p align="justify">
+For the Changan Uni-T, almost all the vulnerabilities worked. Only six of the POCs had no impact. As shown in the video, Braktooth successfully disconnected the Bluetooth connection. Interestingly, the Bluetooth logo on the IVI screen still indicated everything was functioning normally, even though the connection had been severed.
+</p>
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MV52XpLRDq4" 
+title="YouTube video player" frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+<br>
 
 
 
