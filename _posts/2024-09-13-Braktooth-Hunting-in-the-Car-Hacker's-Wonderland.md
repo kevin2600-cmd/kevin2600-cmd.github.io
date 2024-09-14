@@ -1,6 +1,6 @@
 ## Braktooth Hunting in the Car Hacker's Wonderland
 
-## INTRODUCTION
+### INTRODUCTION
 
 <p align="justify">
 Years ago, a team of researchers at SUTD (Asset-Group) discovered and disclosed a family of vulnerabilities in the classic Bluetooth link manager layer. They released a paper and proof-of-concept (POC) named "Braktooth: Causing Havoc on Bluetooth Link Manager". The paper is very detailed and enjoyable to read, and I highly recommend it to anyone interested in Bluetooth security. Braktooth is the codename for a set of 16 classic Bluetooth vulnerabilities that can cause devices to continuously crash or deadlock. In at least one case, attackers can remotely execute arbitrary code and erase all data on the targeted devices. These vulnerabilities are present in various Bluetooth chipsets across many manufacturers, including Intel, Qualcomm, TI, Infineon, and others.
@@ -19,7 +19,7 @@ Since my primary focus is on vehicle security, one aspect of the Braktooth paper
 For in-vehicle infotainment (IVI) systems, the paper specifically mentions the Volvo FH as an example. This led me to wonder whether other popular cars are also affected by Braktooth.
 </p>
 
-## FIRST-BLOOD
+### FIRST-BLOOD
 
 <p align="justify">
 Before diving into testing with cars, we need to familiarize ourselves with Braktooth. Setting up the actual environment is quite straightforward. According to the paper, certain chipsets from MediaTek are affected. My Lenovo L14 laptop uses a Ralink chipset for Bluetooth communication. Since Ralink is part of the MediaTek group, it is an ideal candidate for testing.
@@ -44,8 +44,9 @@ This vulnerability allows attackers to exhaust the Bluetooth resources of the ta
 title="YouTube video player" frameborder="0" 
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
+<br>
 
-## INVESTIGATION
+### INVESTIGATION
 
 <p align="justify">
 The easiest place to start is to have the car components on the test bench. For example, we have a second-hand Nissan IVI in the lab. After running the Invalid-Timing-Accuracy POC, we observed that the Nissan IVI froze and could no longer detect any nearby Bluetooth devices.
