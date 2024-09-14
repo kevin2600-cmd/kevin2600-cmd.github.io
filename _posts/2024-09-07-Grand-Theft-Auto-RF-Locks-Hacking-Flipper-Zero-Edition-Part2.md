@@ -3,7 +3,7 @@
 ### 0x00. INTRODUCTION
 
 <p align="justify">
-Previously from part1, we have looked at some common methods for hacking fixed-code RF Locks, such as signal jamming, replay, and brute-force attack. In part2, we are going to look at more advanced techniques to hack the rolling codes of RF Locks. This series of articles serves as a beginner’s RF lock system hacking journey, performing lock hacking with Flipper-Zero and other RF hacking tools. I hope each case study will help people get a better idea of what they would need for hacking RF locks.
+In Part 1, we explored common methods for hacking fixed-code RF locks, including signal jamming, replay attacks, and brute-force attacks. In Part 2, we will delve into more advanced techniques for hacking the rolling codes of RF locks. This series of articles is designed as a beginner’s guide to RF lock system hacking, utilizing tools such as the Flipper Zero and other RF hacking devices. I hope that each case study will provide valuable insights into the requirements for successfully hacking RF locks.
 </p>
 
 ![image](https://github.com/user-attachments/assets/e9ff4f39-513e-471e-8d5e-db830fe35659)
@@ -11,30 +11,30 @@ Previously from part1, we have looked at some common methods for hacking fixed-c
 ### 0x01. PROPRIETARY ENCRYPTION 
 
 <p align="justify">
-In part1 we mainly target RF locks that rely on fixed-code. Fixed-code locks are vulnerable to replay attack by design. One solution to prevent replay attacks is to implement a so-called rolling codes mechanism. For example, the keyfob and the car synchronized with the same rolling codes algorithm. As the codes change with each use, we will not be able to predict the next sequence of rolling code. The car will not accept the command until the rolling codes is valid, so a simple replay attack will not work.
+In Part 1, we focused on RF locks that use fixed codes. These types of locks are inherently vulnerable to replay attacks. One way to mitigate this vulnerability is by implementing a rolling codes mechanism. For example, both the key fob and the car synchronize using the same rolling codes algorithm. As the codes change with each use, predicting the next code in the sequence becomes difficult. The car will only accept commands with valid rolling codes, rendering simple replay attacks ineffective.
 </p>
 
 ![image](https://github.com/user-attachments/assets/ed961471-d07d-4bba-8ce4-d09b6aa9a0ea)
 
 <p align="justify">
-When it comes to designing a secure cryptosystem, people always say we should never use untested proprietary encryption algorithms in our products. However, there are always some “smart” people trying to challenge this statement. Let's take this commercial RF remote control lock as an example. What makes it very eye-catching is the advertising terms, such as the lock is use a “US military grade of rolling code” chip. What could possibly go wrong then?
+When designing a secure cryptosystem, it is generally advised to avoid using untested proprietary encryption algorithms in products. However, there are always some "innovative" individuals who challenge this guideline. For example, consider this commercial RF remote control lock. It boasts advertising claims such as using a "US military grade rolling code" chip. But what could possibly go wrong?
 </p>
 
 ![image](https://github.com/user-attachments/assets/1e37e3d6-259c-4f25-a286-e3a55cba9b38)
 
 <p align="justify">
-As always, we can fire up our URH with HackRF and capture some unlock signals as sample data to reverse engineer. Of course, just to be sure we can try the replay attack first. However, the lock did not respond, indicating that a rolling codes mechanism was indeed applied.
+As always, we can use URH with HackRF to capture unlock signals and collect sample data for reverse engineering. To confirm the presence of a rolling codes mechanism, we can start by attempting a replay attack. However, the lock did not respond, confirming that a rolling codes mechanism is indeed in place.
 </p>
 
 ![image](https://github.com/user-attachments/assets/92a1e242-cca7-48e7-8922-c3b4d7145e56)
 
 <p align="justify">
-We need to go back and analyze those unlock samples. For the sake of easy comparison, we view the data as Hex mode and decoding the data as Manchester. We soon found some interesting rolling code flaws; every unlock command only randomly changes at bytes 15th, 31st, and 47th, all other bytes remain the same. Not only have that, the rolling codes return to an expired command value every 5 to 10 rounds. This indicates that the keyspace of such proprietary rolling codes is extremely small and we do not even need bruteforce to unlock it.
+We need to revisit and analyze the unlock samples. For easier comparison, we view the data in Hex mode and decode it using Manchester encoding. We soon discovered some intriguing flaws in the rolling code mechanism: every unlock command only changes randomly at bytes 15, 31, and 47, while all other bytes remain constant. Additionally, the rolling codes revert to an expired command value every 5 to 10 rounds. This suggests that the keyspace of this proprietary rolling code is extremely small, making it unnecessary to use brute-force methods to unlock it.
 </p>
 
 ![image](https://github.com/user-attachments/assets/9cdff0a2-cc55-42ce-98cb-b47fa7d9a1c0)
 
-As you can see in the demo video below, we only need to capture the unlocking command once, and then replay it repeatedly, until the lock is finally unlocked. 
+As demonstrated in the video below, we only need to capture the unlocking command once. Afterward, we can replay it repeatedly until the lock is eventually unlocked.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/EruaGuE-cWI" 
 title="YouTube video player" frameborder="0" 
@@ -42,7 +42,7 @@ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; pic
 allowfullscreen></iframe>
 
 <p align="justify">
-In addition, Flipper-Zero can add some well-known keyfobs protocols manually. Take LiftMaster_315 as an example. It implemented a rolling code mechanism. However, as you can see in the pics below, the counter value is predictable, so does the key. Therefore, it is very easy to capture then spoof an unlock command to such system.
+Additionally, the Flipper Zero allows for manual addition of well-known key fob protocols. For instance, the LiftMaster_315 protocol uses a rolling code mechanism. However, as shown in the pictures below, the counter value and key are predictable. This predictability makes it relatively easy to capture and spoof an unlock command for this system.
 </p>
 
 ![image](https://github.com/user-attachments/assets/183ef6fa-989a-4a88-9bee-d527f1162bed)
