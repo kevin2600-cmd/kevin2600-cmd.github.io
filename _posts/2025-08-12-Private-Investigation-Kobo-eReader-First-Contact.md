@@ -20,7 +20,16 @@ However, I was somewhat disappointed to find that their website states, “Kobo 
 
 <img width="580" height="76" alt="image" src="https://github.com/user-attachments/assets/16539894-d6cb-42a3-8277-e3f6d9d09904" />
 
-
 <p align="justify">
 Even though there’s no bug bounty, I still believe the whole journey will make a great series of articles for blog. By sharing my hacking experience with the Kobo eReader, I hope to inspire more people to take an interest in hardware hacking. So, fasten your seatbelt - let the exploration begin!
 </p>
+
+### MYSTERY BAUD-RATE
+
+<p align="justify">
+Kobo offers various versions of its eReaders, the one I have is the Kobo Clara BW. Since I love low-level hardware hacking, my first step with any device is to disassemble it. Using a blade, I was able to easily pop open the case. 
+</p>
+
+<img width="715" alt="2" src="https://github.com/user-attachments/assets/de8fb395-4717-46a3-a307-161cc4956bf6">
+
+
