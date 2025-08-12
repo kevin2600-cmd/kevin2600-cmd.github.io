@@ -61,21 +61,27 @@ So, we needed to find the exact baud rate for the Kobo eReader first. About 10 y
 Lucky for us, we have a hardware hacker’s best friend the logic analyzer. I used the Saleae Logic2, the best part is that Saleae provides an extension called Baud Rate Estimate. With it, we were able to easily find the correct secret baud rate.
 </p>
 
-<img width="400" height="418" alt="image" src="https://github.com/user-attachments/assets/2e9300dd-2d67-4814-998d-b8549aa0aef0" />
-<img width="450" height="418" alt="image" src="https://github.com/user-attachments/assets/3632582e-ae00-4430-8922-8c67f1fdd3fe" />
+<img width="350" height="418" alt="image" src="https://github.com/user-attachments/assets/2e9300dd-2d67-4814-998d-b8549aa0aef0" />
+<img width="465" height="418" alt="image" src="https://github.com/user-attachments/assets/3632582e-ae00-4430-8922-8c67f1fdd3fe" />
 
 <p align="justify">
 With the correct baud rate configured, we successfully received meaningful text and were greeted by the login prompt from the Kobo eReader.
 </p>
 
+<img width="659" height="147" alt="K10" src="https://github.com/user-attachments/assets/d774c8d7-0bf0-4f2a-a6d0-b7a329ba04cd" />
+
 <p align="justify">
 A fun fact: sometimes, the order in which you hack really matters. If I had chosen to root the device first, I probably would have found the correct baud rate clearly written inside a cmdline configuration file first, which would have saved me all the hassle! 
 </p>
+
+<img width="519" height="139" alt="image" src="https://github.com/user-attachments/assets/10f2cc70-d8d2-4983-be9f-0ea313ae81da" />
 
 <p align="justify">
 In addition, the U-Boot configuration parameter “bootdelay” specifies a 2 seconds wait during the boot process. This
 gives us a 2 seconds window to manually interrupt the boot and access the U-Boot prompt of Kobo eReader.
 </p>
+
+<img width="1075" height="403" alt="K11" src="https://github.com/user-attachments/assets/dece584a-896c-42fb-9fec-74acd6236a22" />
 
 
 
