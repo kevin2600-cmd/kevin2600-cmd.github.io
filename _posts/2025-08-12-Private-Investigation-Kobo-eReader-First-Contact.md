@@ -50,6 +50,16 @@ Well, we’re not there yet. Here comes our first roadblock. If you’ve done si
 
 <img width="580" alt="2" src="https://github.com/user-attachments/assets/2d2a2033-09ff-422d-989b-91676160d709">
 
+<p align="justify">
+So, we needed to find the exact baud rate for the Kobo eReader first. About 10 years ago, a great security researcher named devttys0 released a python script to brute-force baud rates. This method usually works well, but unfortunately, it didn’t work out this time. By looking at the source code, we can see that the usual baud rates are hard-coded. So if our target device doesn’t use those rates, the script won’t be able to figure it out.
+</p>
+
+<img width="450" height="235" alt="image" src="https://github.com/user-attachments/assets/9cf943d4-989d-4329-b424-a6ee87510253" />
+<img width="217" height="289" alt="image" src="https://github.com/user-attachments/assets/9834b596-eaaf-4fbc-a928-5d44a6213629" />
+
+
+
+
 
 
 
