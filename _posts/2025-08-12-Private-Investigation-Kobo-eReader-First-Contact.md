@@ -82,7 +82,11 @@ gives us a 2 seconds window to manually interrupt the boot and access the U-Boot
 
 <img width="1075" height="403" alt="K11" src="https://github.com/user-attachments/assets/dece584a-896c-42fb-9fec-74acd6236a22" />
 
+### GOT ROOT? DOUBLE KILL!
 
+When the Kobo eReader is powered on for the first time, it automatically contacts the remote server to check for any available firmware updates. we can verify the installed firmware and kernel versions in the Device Information section.
+
+<img width="1032" height="607" alt="K18" src="https://github.com/user-attachments/assets/1f894f06-64b6-49e8-a5fa-5a87b3f12e01" />
 
 
 
