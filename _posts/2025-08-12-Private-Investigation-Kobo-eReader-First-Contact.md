@@ -14,5 +14,12 @@ During Cansecwest last year, I was showing one of the speakers around Vancouver.
 
 <img width="715" height="446" alt="K2" src="https://github.com/user-attachments/assets/c6764f25-16db-42f8-9607-f1885853eb0a" />
 
+<p align="justify">
+However, I was somewhat disappointed to find that their website states, “Kobo does not offer monetary rewards for vulnerability disclosures. In addition, the website also state that Kobo does not use universal default or easily guessable passwords; I later discovered that this is not entirely true. 
+</p>
 
+<img width="580" height="76" alt="image" src="https://github.com/user-attachments/assets/16539894-d6cb-42a3-8277-e3f6d9d09904" />
 
+<p align="justify">
+Even though there’s no bug bounty, I still believe the whole journey will make a great series of articles for blog. By sharing my hacking experience with the Kobo eReader, I hope to inspire more people to take an interest in hardware hacking. So, fasten your seatbelt - let the exploration begin!
+</p>
