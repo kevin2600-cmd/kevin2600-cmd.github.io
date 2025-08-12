@@ -10,5 +10,3 @@ Ever since I got involved in the financial sector, I've spent a lot of time trad
 
 
 
-
-
