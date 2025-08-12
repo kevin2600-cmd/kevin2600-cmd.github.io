@@ -55,7 +55,7 @@ So, we needed to find the exact baud rate for the Kobo eReader first. About 10 y
 </p>
 
 <img width="450" height="235" alt="image" src="https://github.com/user-attachments/assets/9cf943d4-989d-4329-b424-a6ee87510253" />
-<img width="217" height="289" alt="image" src="https://github.com/user-attachments/assets/9834b596-eaaf-4fbc-a928-5d44a6213629" />
+<img width="217" height="235" alt="image" src="https://github.com/user-attachments/assets/9834b596-eaaf-4fbc-a928-5d44a6213629" />
 
 
 
