@@ -17,6 +17,7 @@ During Cansecwest last year, I was showing one of the speakers around Vancouver.
 <p align="justify">
 However, I was somewhat disappointed to find that their website states, “Kobo does not offer monetary rewards for vulnerability disclosures. In addition, the website also state that Kobo does not use universal default or easily guessable passwords; I later discovered that this is not entirely true. 
 </p>
+
 <img width="580" height="76" alt="image" src="https://github.com/user-attachments/assets/16539894-d6cb-42a3-8277-e3f6d9d09904" />
 
 <p align="justify">
