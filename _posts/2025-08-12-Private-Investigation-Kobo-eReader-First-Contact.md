@@ -32,4 +32,15 @@ Kobo offers various versions of its eReaders, the one I have is the Kobo Clara B
 
 <img width="715" alt="2" src="https://github.com/user-attachments/assets/de8fb395-4717-46a3-a307-161cc4956bf6">
 
+<p align="justify">
+A closer inspection reveals that the Kobo Clara BW is powered by a MediaTek ARM processor and uses an eMMC chip for storage. An upgrade from earlier models that relied on SD cards for file storage.
+</p>
+
+<img width="580" alt="2" src="https://github.com/user-attachments/assets/1f9224cf-04d4-4083-86ac-dba2f6dc999f">
+
+
+
+
+
+
 
