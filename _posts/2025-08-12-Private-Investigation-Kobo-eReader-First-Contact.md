@@ -61,7 +61,7 @@ So, we needed to find the exact baud rate for the Kobo eReader first. About 10 y
 Lucky for us, we have a hardware hacker’s best friend the logic analyzer. I used the Saleae Logic2, the best part is that Saleae provides an extension called Baud Rate Estimate. With it, we were able to easily find the correct secret baud rate.
 </p>
 
-<img width="450" height="433" alt="K10" src="https://github.com/user-attachments/assets/a6901543-6c80-461e-abd4-6e7d546682ef" />
+<img width="410" height="433" alt="K10" src="https://github.com/user-attachments/assets/a6901543-6c80-461e-abd4-6e7d546682ef" />
 
 <p align="justify">
 With the correct baud rate configured, we successfully received meaningful text and were greeted by the login prompt from the Kobo eReader.
@@ -80,13 +80,13 @@ In addition, the U-Boot configuration parameter “bootdelay” specifies a 2 se
 gives us a 2 seconds window to manually interrupt the boot and access the U-Boot prompt of Kobo eReader.
 </p>
 
-<img width="1075" height="403" alt="K11" src="https://github.com/user-attachments/assets/dece584a-896c-42fb-9fec-74acd6236a22" />
+<img width="519" height="608" alt="K11" src="https://github.com/user-attachments/assets/dece584a-896c-42fb-9fec-74acd6236a22" />
 
 ### GOT ROOT? DOUBLE KILL!
 
 When the Kobo eReader is powered on for the first time, it automatically contacts the remote server to check for any available firmware updates. we can verify the installed firmware and kernel versions in the Device Information section.
 
-<img width="1032" height="607" alt="K18" src="https://github.com/user-attachments/assets/1f894f06-64b6-49e8-a5fa-5a87b3f12e01" />
+<img width="519" height="607" alt="K18" src="https://github.com/user-attachments/assets/1f894f06-64b6-49e8-a5fa-5a87b3f12e01" />
 
 
 
