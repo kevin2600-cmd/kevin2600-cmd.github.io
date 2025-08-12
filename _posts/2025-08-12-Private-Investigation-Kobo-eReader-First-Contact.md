@@ -8,7 +8,7 @@ Ever since I got involved in the financial sector, I've spent a lot of time trad
 
 ![K1](https://github.com/user-attachments/assets/648157eb-f17e-4be0-bb95-ce5bb05f9252)
 
-
+<img width="715" alt="2" src="https://github.com/user-attachments/assets/648157eb-f17e-4be0-bb95-ce5bb05f9252">
 
 
 
