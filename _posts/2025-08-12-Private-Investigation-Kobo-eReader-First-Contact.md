@@ -30,7 +30,7 @@ Even though there’s no bug bounty, I still believe the whole journey will make
 Kobo offers various versions of its eReaders, the one I have is the Kobo Clara BW. Since I love low-level hardware hacking, my first step with any device is to disassemble it. Using a blade, I was able to easily pop open the case. 
 </p>
 
-<img width="715" alt="2" src="https://github.com/user-attachments/assets/de8fb395-4717-46a3-a307-161cc4956bf6">
+<img width="580" alt="2" src="https://github.com/user-attachments/assets/de8fb395-4717-46a3-a307-161cc4956bf6">
 
 <p align="justify">
 A closer inspection reveals that the Kobo Clara BW is powered by a MediaTek ARM processor and uses an eMMC chip for storage. An upgrade from earlier models that relied on SD cards for file storage.
@@ -43,5 +43,29 @@ What really caught my attention was the presence of clearly labelled debug ports
 </p>
 
 <img width="580" alt="2" src="https://github.com/user-attachments/assets/821c2d47-2782-44b4-99ec-881925883d8b">
+
+<p align="justify">
+Well, we’re not there yet. Here comes our first roadblock. If you’ve done similar project before, you know that configuring the correct baud rate is essential to receiving clear text. Normally, the default baud rate for most devices is either 9600 or 115200. Unfortunately, that’s not the case here, when using those settings, we only receive garbage text.
+</p>
+
+<img width="580" alt="2" src="https://github.com/user-attachments/assets/2d2a2033-09ff-422d-989b-91676160d709">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
