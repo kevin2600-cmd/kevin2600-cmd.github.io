@@ -37,9 +37,10 @@ A closer inspection reveals that the Kobo Clara BW is powered by a MediaTek ARM 
 </p>
 
 <img width="580" alt="2" src="https://github.com/user-attachments/assets/1f9224cf-04d4-4083-86ac-dba2f6dc999f">
-
 <img width="580" alt="2" src="https://github.com/user-attachments/assets/821c2d47-2782-44b4-99ec-881925883d8b">
 
-
+<p align="justify">
+What really caught my attention was the presence of clearly labelled debug ports, with the TX/RX pins appearing to be UART connections. You’d think that once we connect to the ports, we could start messing around immediately right?
+</p>
 
 
