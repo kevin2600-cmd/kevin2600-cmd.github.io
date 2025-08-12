@@ -62,7 +62,7 @@ Lucky for us, we have a hardware hacker’s best friend the logic analyzer. I us
 </p>
 
 <img width="450" height="418" alt="image" src="https://github.com/user-attachments/assets/2e9300dd-2d67-4814-998d-b8549aa0aef0" />
-<img width="450" height="312" alt="image" src="https://github.com/user-attachments/assets/3632582e-ae00-4430-8922-8c67f1fdd3fe" />
+<img width="350" height="418" alt="image" src="https://github.com/user-attachments/assets/3632582e-ae00-4430-8922-8c67f1fdd3fe" />
 
 <p align="justify">
 With the correct baud rate configured, we successfully received meaningful text and were greeted by the login prompt from the Kobo eReader.
