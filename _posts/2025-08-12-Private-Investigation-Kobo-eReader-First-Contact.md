@@ -153,6 +153,44 @@ Once we gained root access on the eReader, uncovering more details about the dev
 
 <img width="912" height="234" alt="image" src="https://github.com/user-attachments/assets/e4cc2ab9-8b6b-4331-81da-1f4d9845ae88" />
 
+As with any post-exploitation phase, it’s advisable to enumerate and analyze all accessible files, as they may contain sensitive information. Configuration files are often a valuable starting point, as they can reveal credentials, API keys, or other security-critical data.
+
+<img width="448" height="512" alt="image" src="https://github.com/user-attachments/assets/5ed1a0f5-3542-4522-ac48-cb9e641a9fee" />
+
+For example, a bt_config.bak file located in the bluedroid directory contains Bluetooth encryption keys in plain-text.
+<img width="475" height="319" alt="image" src="https://github.com/user-attachments/assets/208a15db-abb1-47d8-94b8-0992969e40f5" />
+
+The wpa_supplicant.conf file, stored in /etc/wpa_supplicant/, holds the encryption keys for all Wi-Fi networks you’ve ever connected to, making it a critical target for attackers.
+<img width="709" height="271" alt="image" src="https://github.com/user-attachments/assets/68d801f3-9387-4332-8d03-4a0df526d671" />
+
+Analysis of the files system revealed that, similar to many other embedded devices, Kobo eReader relies heavily on BusyBox, which may introduce more potential attack vectors.
+<img width="790" height="385" alt="image" src="https://github.com/user-attachments/assets/c19033ba-b15c-4bea-af2e-2180b5aa2243" />
+
+A common action attackers take after gaining root access to a target system is to install a hidden backdoor to maintain persistent access. This can be easily achieved using BusyBox’s nc command or more stealthily by leveraging openssl, as the latter encrypts all traffic
+<img width="965" height="615" alt="image" src="https://github.com/user-attachments/assets/d04585ea-0ab7-4b21-a047-5c284ee9cdfe" />
+
+### SUMMARY
+
+In the first part of this article, we explored how to identify the actual baud rate and successfully gain root access on the Kobo eReader. In the upcoming article, we’ll dive deeper, demonstrating how to setup hidden backdoor for persistent access and how to perform fuzzing techniques to uncover vulnerabilities. Stay tuned for “Private Investigation – Kobo eReader – Deep Dive.”
+
+### REFERENCE 
+
+https://github.com/devttys0/baudrate
+
+https://github.com/kobolabs/Kobo-Reader
+
+https://pgaskin.net/KoboStuff/kobofirmware.html 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
