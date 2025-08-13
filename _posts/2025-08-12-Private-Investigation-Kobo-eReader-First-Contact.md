@@ -80,57 +80,76 @@ In addition, the U-Boot configuration parameter “bootdelay” specifies a 2 se
 gives us a 2 seconds window to manually interrupt the boot and access the U-Boot prompt of Kobo eReader.
 </p>
 
-<img width="519" height="208" alt="K11" src="https://github.com/user-attachments/assets/dece584a-896c-42fb-9fec-74acd6236a22" />
-
 ### GOT ROOT? DOUBLE KILL!
 
 <p align="justify">
 When the Kobo eReader is powered on for the first time, it automatically contacts the remote server to check for any available firmware updates. we can verify the installed firmware and kernel versions in the Device Information section.
 </p>
 
-<img width="519" height="607" alt="K18" src="https://github.com/user-attachments/assets/1f894f06-64b6-49e8-a5fa-5a87b3f12e01" />
+<img width="732" height="607" alt="K18" src="https://github.com/user-attachments/assets/1678040b-46bf-4c4b-9a57-64a518519bb7" />
 
 <p align="justify">
 In addition, the device also supports firmware updates via USB. Specifically, if a file named KoboRoot.tgz is placed in the .kobo folder of the public partition, the Kobo will extract the contents of this archive into the root directory and then reboot automatically.
 </p>
 
+<img width="550" height="123" alt="image" src="https://github.com/user-attachments/assets/5c517daa-3dd1-465f-896e-153c937356f6" />
+
 <p align="justify">
 This mechanism can be leveraged to modify system files to enable additional services. For example, Telnet access can be enabled by including the appropriate configuration within the inetd.conf.user  file. 
 </p>
+
+<img width="550" height="112" alt="image" src="https://github.com/user-attachments/assets/07e0acb9-f498-45ff-a2c0-6cfb3c348441" />
+
+<img width="496" height="62" alt="image" src="https://github.com/user-attachments/assets/cc77d3a1-7d93-4ea2-b83d-a281a014b0d9" />
 
 <p align="justify">
 Interestingly, up until Kobo firmware version 4.41.23145, the device’s /etc/passwd file contained an admin account with a password that could be easily guessed or cracked.
 </p>
 
+<img width="933" height="269" alt="image" src="https://github.com/user-attachments/assets/4f1b8ac9-91f0-4364-844d-18ea73c8f7ae" />
+
 <p align="justify">
 This finding stands in contrast to Kobo’s stated position that they do not use universal default or easily guessable passwords.
 </p>
+
+<img width="656" height="162" alt="image" src="https://github.com/user-attachments/assets/e34669ca-992b-437d-b49f-af21511488e0" />
+
 
 <p align="justify">
 We were then able to login to the Kobo eReader via Telnet or Serial port using those credentials, which granted us root privileges. 
 </p>
 
+<img width="622" height="241" alt="image" src="https://github.com/user-attachments/assets/653be067-0570-4fc6-824b-ded50600bb38" />
+
 <p align="justify">
 Finally, a firmware patch 4.42.23296 released by Kobo in May 2025 appears to have addressed this issue. 
 </p>
 
+<img width="614" height="201" alt="image" src="https://github.com/user-attachments/assets/7b139daf-6f7d-4201-9e42-4ddc6d08c011" />
+
 <p align="justify">
 We have confirmed that the admin account has indeed been removed.
 </p>
+<img width="561" height="133" alt="image" src="https://github.com/user-attachments/assets/933dfc2e-2701-4ce2-a8e3-e0b897fce07a" />
 
 <p align="justify">
 However, the root cause of the issue is that the Kobo eReader does not implement any key signing to harden the firmware.
 </p>
+<img width="565" height="139" alt="image" src="https://github.com/user-attachments/assets/4a732d15-e829-457a-a413-edcb16edfe61" />
 
 <p align="justify">
 As a result, it is possible to remove the password for the root account and regain access easily with root privilege.
 </p>
+
+<img width="795" height="182" alt="image" src="https://github.com/user-attachments/assets/fdfd6011-e25a-41d7-bb42-8688f899b9e3" />
 
 ### POST-EXPLOITATION 
 
 <p align="justify">
 Once we gained root access on the eReader, uncovering more details about the device became effortless. A simple command revealed that the Kobo Clara BW is powered by an ARMv7 processor built on the MediaTek MT8180 platform.
 </p>
+
+<img width="912" height="234" alt="image" src="https://github.com/user-attachments/assets/e4cc2ab9-8b6b-4331-81da-1f4d9845ae88" />
 
 
 
