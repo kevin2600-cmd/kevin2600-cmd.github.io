@@ -176,7 +176,7 @@ Analysis of the files system revealed that, similar to many other embedded devic
 <img width="790" height="385" alt="image" src="https://github.com/user-attachments/assets/c19033ba-b15c-4bea-af2e-2180b5aa2243" />
 
 <p align="justify">
-A common action attackers take after gaining root access to a target system is to install a hidden backdoor to maintain persistent access. This can be easily achieved using BusyBox’s nc command or more stealthily by leveraging openssl, as the latter encrypts all traffic
+A common action attackers take after gaining root access to a target system is to install a hidden backdoor for reverse shell to maintain persistent access. This can be easily achieved using BusyBox’s nc command or more stealthily by leveraging openssl, as the latter encrypts all traffic
 </p>
 <img width="965" height="615" alt="image" src="https://github.com/user-attachments/assets/d04585ea-0ab7-4b21-a047-5c284ee9cdfe" />
 
