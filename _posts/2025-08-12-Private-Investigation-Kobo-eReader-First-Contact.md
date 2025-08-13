@@ -187,11 +187,18 @@ In the first part of this article, we explored how to identify the actual baud r
 
 ### REFERENCE 
 
+<p align="justify">
 https://github.com/devttys0/baudrate
+</p>
 
+<p align="justify">
 https://github.com/kobolabs/Kobo-Reader
+</p>
 
+<p align="justify">
 https://pgaskin.net/KoboStuff/kobofirmware.html 
+</p>
+
 
 
 
