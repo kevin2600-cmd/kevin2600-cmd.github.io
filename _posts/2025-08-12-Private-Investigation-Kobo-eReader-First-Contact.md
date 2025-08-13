@@ -61,7 +61,7 @@ So, we needed to find the exact baud rate for the Kobo eReader first. About 10 y
 Lucky for us, we have a hardware hacker’s best friend the logic analyzer. I used the Saleae Logic2, the best part is that Saleae provides an extension called Baud Rate Estimate. With it, we were able to easily find the correct secret baud rate.
 </p>
 
-<img width="410" height="433" alt="K10" src="https://github.com/user-attachments/assets/a6901543-6c80-461e-abd4-6e7d546682ef" />
+<img width="380" height="433" alt="K10" src="https://github.com/user-attachments/assets/a6901543-6c80-461e-abd4-6e7d546682ef" />
 
 <p align="justify">
 With the correct baud rate configured, we successfully received meaningful text and were greeted by the login prompt from the Kobo eReader.
