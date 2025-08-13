@@ -80,13 +80,15 @@ In addition, the U-Boot configuration parameter “bootdelay” specifies a 2 se
 gives us a 2 seconds window to manually interrupt the boot and access the U-Boot prompt of Kobo eReader.
 </p>
 
+<img width="1075" height="403" alt="image" src="https://github.com/user-attachments/assets/81217ead-673a-4b0e-959d-c19546c9beaa" />
+
 ### GOT ROOT? DOUBLE KILL!
 
 <p align="justify">
 When the Kobo eReader is powered on for the first time, it automatically contacts the remote server to check for any available firmware updates. we can verify the installed firmware and kernel versions in the Device Information section.
 </p>
 
-<img width="732" height="607" alt="K18" src="https://github.com/user-attachments/assets/1678040b-46bf-4c4b-9a57-64a518519bb7" />
+<img width="616" height="376" alt="K18" src="https://github.com/user-attachments/assets/d32039d2-72d5-466d-97e4-c2dfc8b4aa7a" />
 
 <p align="justify">
 In addition, the device also supports firmware updates via USB. Specifically, if a file named KoboRoot.tgz is placed in the .kobo folder of the public partition, the Kobo will extract the contents of this archive into the root directory and then reboot automatically.
