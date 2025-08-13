@@ -73,14 +73,14 @@ With the correct baud rate configured, we successfully received meaningful text 
 A fun fact: sometimes, the order in which you hack really matters. If I had chosen to root the device first, I probably would have found the correct baud rate clearly written inside a cmdline configuration file first, which would have saved me all the hassle! 
 </p>
 
-<img width="519" height="139" alt="image" src="https://github.com/user-attachments/assets/10f2cc70-d8d2-4983-be9f-0ea313ae81da" />
+<img width="519" height="239" alt="image" src="https://github.com/user-attachments/assets/10f2cc70-d8d2-4983-be9f-0ea313ae81da" />
 
 <p align="justify">
 In addition, the U-Boot configuration parameter “bootdelay” specifies a 2 seconds wait during the boot process. This
 gives us a 2 seconds window to manually interrupt the boot and access the U-Boot prompt of Kobo eReader.
 </p>
 
-<img width="519" height="608" alt="K11" src="https://github.com/user-attachments/assets/dece584a-896c-42fb-9fec-74acd6236a22" />
+<img width="519" height="208" alt="K11" src="https://github.com/user-attachments/assets/dece584a-896c-42fb-9fec-74acd6236a22" />
 
 ### GOT ROOT? DOUBLE KILL!
 
