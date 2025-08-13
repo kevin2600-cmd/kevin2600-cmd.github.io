@@ -84,16 +84,53 @@ gives us a 2 seconds window to manually interrupt the boot and access the U-Boot
 
 ### GOT ROOT? DOUBLE KILL!
 
+<p align="justify">
 When the Kobo eReader is powered on for the first time, it automatically contacts the remote server to check for any available firmware updates. we can verify the installed firmware and kernel versions in the Device Information section.
+</p>
 
 <img width="519" height="607" alt="K18" src="https://github.com/user-attachments/assets/1f894f06-64b6-49e8-a5fa-5a87b3f12e01" />
 
+<p align="justify">
+In addition, the device also supports firmware updates via USB. Specifically, if a file named KoboRoot.tgz is placed in the .kobo folder of the public partition, the Kobo will extract the contents of this archive into the root directory and then reboot automatically.
+</p>
 
+<p align="justify">
+This mechanism can be leveraged to modify system files to enable additional services. For example, Telnet access can be enabled by including the appropriate configuration within the inetd.conf.user  file. 
+</p>
 
+<p align="justify">
+Interestingly, up until Kobo firmware version 4.41.23145, the device’s /etc/passwd file contained an admin account with a password that could be easily guessed or cracked.
+</p>
 
+<p align="justify">
+This finding stands in contrast to Kobo’s stated position that they do not use universal default or easily guessable passwords.
+</p>
 
+<p align="justify">
+We were then able to login to the Kobo eReader via Telnet or Serial port using those credentials, which granted us root privileges. 
+</p>
 
+<p align="justify">
+Finally, a firmware patch 4.42.23296 released by Kobo in May 2025 appears to have addressed this issue. 
+</p>
 
+<p align="justify">
+We have confirmed that the admin account has indeed been removed.
+</p>
+
+<p align="justify">
+However, the root cause of the issue is that the Kobo eReader does not implement any key signing to harden the firmware.
+</p>
+
+<p align="justify">
+As a result, it is possible to remove the password for the root account and regain access easily with root privilege.
+</p>
+
+### POST-EXPLOITATION 
+
+<p align="justify">
+Once we gained root access on the eReader, uncovering more details about the device became effortless. A simple command revealed that the Kobo Clara BW is powered by an ARMv7 processor built on the MediaTek MT8180 platform.
+</p>
 
 
 
