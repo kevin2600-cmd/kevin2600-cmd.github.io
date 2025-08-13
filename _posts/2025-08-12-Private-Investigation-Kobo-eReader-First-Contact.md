@@ -74,7 +74,7 @@ With the correct baud rate configured, we successfully received meaningful text 
 A fun fact: sometimes, the order in which you hack really matters. If I had chosen to root the device first, I probably would have found the correct baud rate clearly written inside a cmdline configuration file first, which would have saved me all the hassle! :p
 </p>
 
-<img width="519" height="220" alt="image" src="https://github.com/user-attachments/assets/10f2cc70-d8d2-4983-be9f-0ea313ae81da" />
+<img width="519" height="200" alt="image" src="https://github.com/user-attachments/assets/10f2cc70-d8d2-4983-be9f-0ea313ae81da" />
 
 <p align="justify">
 In addition, the U-Boot configuration parameter “bootdelay” specifies a 2 seconds wait during the boot process. This
